@@ -1,0 +1,751 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31C17894119B5D264E8DD439 /* Pods_fblamobileapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */; };
+		46C8E89439FA49ADC5ABD7F3 /* Pods_fblamobileappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */; };
+		9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */; };
+		9221D1CB1E4C31D7003FADBE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1CA1E4C31D7003FADBE /* HomeViewController.swift */; };
+		9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1CC1E4C3386003FADBE /* LoginViewController.swift */; };
+		924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376651E4C36760004DEB4 /* PasswordResetViewController.swift */; };
+		92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */; };
+		92E823001E4C22F200DDFFB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E822FE1E4C22F200DDFFB9 /* Main.storyboard */; };
+		92E823021E4C22F200DDFFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E823011E4C22F200DDFFB9 /* Assets.xcassets */; };
+		92E823051E4C22F200DDFFB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */; };
+		92E823101E4C22F200DDFFB9 /* fblamobileappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8230F1E4C22F200DDFFB9 /* fblamobileappTests.swift */; };
+		92E8231B1E4C22F200DDFFB9 /* fblamobileappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E8231A1E4C22F200DDFFB9 /* fblamobileappUITests.swift */; };
+		92E823291E4C265500DDFFB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92E823281E4C265500DDFFB9 /* GoogleService-Info.plist */; };
+		DC0F0C2679A61BCE8398C229 /* Pods_fblamobileappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743078D869DDC8ABD809349E /* Pods_fblamobileappUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92E8230C1E4C22F200DDFFB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E822EF1E4C22F200DDFFB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E822F61E4C22F200DDFFB9;
+			remoteInfo = fblamobileapp;
+		};
+		92E823171E4C22F200DDFFB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E822EF1E4C22F200DDFFB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E822F61E4C22F200DDFFB9;
+			remoteInfo = fblamobileapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		222C24BCC423785D9A1C39CD /* Pods-fblamobileapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileapp/Pods-fblamobileapp.release.xcconfig"; sourceTree = "<group>"; };
+		3022EBD6866806CC53B25EEA /* Pods-fblamobileapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileapp/Pods-fblamobileapp.debug.xcconfig"; sourceTree = "<group>"; };
+		401EC1B061C3C8A92069EB5D /* Pods-fblamobileappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileappUITests/Pods-fblamobileappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		589D1DDDE9611CD92B34B0F1 /* Pods-fblamobileappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileappTests/Pods-fblamobileappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		743078D869DDC8ABD809349E /* Pods_fblamobileappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		812852EF7B284E4E18DBA037 /* Pods-fblamobileappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileappTests/Pods-fblamobileappTests.release.xcconfig"; sourceTree = "<group>"; };
+		88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9221D1CA1E4C31D7003FADBE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9221D1CC1E4C3386003FADBE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		924376651E4C36760004DEB4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fblamobileapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92E822FF1E4C22F200DDFFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92E823011E4C22F200DDFFB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92E823041E4C22F200DDFFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92E823061E4C22F200DDFFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E8230B1E4C22F200DDFFB9 /* fblamobileappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fblamobileappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E8230F1E4C22F200DDFFB9 /* fblamobileappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fblamobileappTests.swift; sourceTree = "<group>"; };
+		92E823111E4C22F200DDFFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E823161E4C22F200DDFFB9 /* fblamobileappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fblamobileappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E8231A1E4C22F200DDFFB9 /* fblamobileappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fblamobileappUITests.swift; sourceTree = "<group>"; };
+		92E8231C1E4C22F200DDFFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E823281E4C265500DDFFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5AA02C271130E8593128781 /* Pods-fblamobileappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileappUITests/Pods-fblamobileappUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92E822F41E4C22F200DDFFB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C17894119B5D264E8DD439 /* Pods_fblamobileapp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E823081E4C22F200DDFFB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46C8E89439FA49ADC5ABD7F3 /* Pods_fblamobileappTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E823131E4C22F200DDFFB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0F0C2679A61BCE8398C229 /* Pods_fblamobileappUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92E822EE1E4C22F200DDFFB9 = {
+			isa = PBXGroup;
+			children = (
+				92E822F91E4C22F200DDFFB9 /* fblamobileapp */,
+				92E8230E1E4C22F200DDFFB9 /* fblamobileappTests */,
+				92E823191E4C22F200DDFFB9 /* fblamobileappUITests */,
+				92E822F81E4C22F200DDFFB9 /* Products */,
+				B1E31911D10E51A4A8F44042 /* Pods */,
+				D742ABC7F9C6C6F9553E1CB3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92E822F81E4C22F200DDFFB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */,
+				92E8230B1E4C22F200DDFFB9 /* fblamobileappTests.xctest */,
+				92E823161E4C22F200DDFFB9 /* fblamobileappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92E822F91E4C22F200DDFFB9 /* fblamobileapp */ = {
+			isa = PBXGroup;
+			children = (
+				92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */,
+				9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */,
+				9221D1CC1E4C3386003FADBE /* LoginViewController.swift */,
+				924376651E4C36760004DEB4 /* PasswordResetViewController.swift */,
+				9221D1CA1E4C31D7003FADBE /* HomeViewController.swift */,
+				92E822FE1E4C22F200DDFFB9 /* Main.storyboard */,
+				92E823011E4C22F200DDFFB9 /* Assets.xcassets */,
+				92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */,
+				92E823061E4C22F200DDFFB9 /* Info.plist */,
+				92E823281E4C265500DDFFB9 /* GoogleService-Info.plist */,
+			);
+			path = fblamobileapp;
+			sourceTree = "<group>";
+		};
+		92E8230E1E4C22F200DDFFB9 /* fblamobileappTests */ = {
+			isa = PBXGroup;
+			children = (
+				92E8230F1E4C22F200DDFFB9 /* fblamobileappTests.swift */,
+				92E823111E4C22F200DDFFB9 /* Info.plist */,
+			);
+			path = fblamobileappTests;
+			sourceTree = "<group>";
+		};
+		92E823191E4C22F200DDFFB9 /* fblamobileappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92E8231A1E4C22F200DDFFB9 /* fblamobileappUITests.swift */,
+				92E8231C1E4C22F200DDFFB9 /* Info.plist */,
+			);
+			path = fblamobileappUITests;
+			sourceTree = "<group>";
+		};
+		B1E31911D10E51A4A8F44042 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3022EBD6866806CC53B25EEA /* Pods-fblamobileapp.debug.xcconfig */,
+				222C24BCC423785D9A1C39CD /* Pods-fblamobileapp.release.xcconfig */,
+				589D1DDDE9611CD92B34B0F1 /* Pods-fblamobileappTests.debug.xcconfig */,
+				812852EF7B284E4E18DBA037 /* Pods-fblamobileappTests.release.xcconfig */,
+				401EC1B061C3C8A92069EB5D /* Pods-fblamobileappUITests.debug.xcconfig */,
+				C5AA02C271130E8593128781 /* Pods-fblamobileappUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D742ABC7F9C6C6F9553E1CB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */,
+				0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */,
+				743078D869DDC8ABD809349E /* Pods_fblamobileappUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92E822F61E4C22F200DDFFB9 /* fblamobileapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E8231F1E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileapp" */;
+			buildPhases = (
+				0C5616DF427621EFC9C98C30 /* [CP] Check Pods Manifest.lock */,
+				92E822F31E4C22F200DDFFB9 /* Sources */,
+				92E822F41E4C22F200DDFFB9 /* Frameworks */,
+				92E822F51E4C22F200DDFFB9 /* Resources */,
+				71756E2230B53A5A1E2B17D1 /* [CP] Embed Pods Frameworks */,
+				50B2DAAAABAF22FDCDDB39EE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fblamobileapp;
+			productName = fblamobileapp;
+			productReference = 92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92E8230A1E4C22F200DDFFB9 /* fblamobileappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E823221E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappTests" */;
+			buildPhases = (
+				3D891C34B2F922C7DDA1FC9D /* [CP] Check Pods Manifest.lock */,
+				92E823071E4C22F200DDFFB9 /* Sources */,
+				92E823081E4C22F200DDFFB9 /* Frameworks */,
+				92E823091E4C22F200DDFFB9 /* Resources */,
+				4B91108E0287BA7E603892A8 /* [CP] Embed Pods Frameworks */,
+				EC600BB03EEE19091DCBC040 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E8230D1E4C22F200DDFFB9 /* PBXTargetDependency */,
+			);
+			name = fblamobileappTests;
+			productName = fblamobileappTests;
+			productReference = 92E8230B1E4C22F200DDFFB9 /* fblamobileappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92E823151E4C22F200DDFFB9 /* fblamobileappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E823251E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappUITests" */;
+			buildPhases = (
+				56F02F3C47A85935DD413322 /* [CP] Check Pods Manifest.lock */,
+				92E823121E4C22F200DDFFB9 /* Sources */,
+				92E823131E4C22F200DDFFB9 /* Frameworks */,
+				92E823141E4C22F200DDFFB9 /* Resources */,
+				A23AC1F2C0B504C0C56FFC82 /* [CP] Embed Pods Frameworks */,
+				7C2FE7259A70AB53372031FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E823181E4C22F200DDFFB9 /* PBXTargetDependency */,
+			);
+			name = fblamobileappUITests;
+			productName = fblamobileappUITests;
+			productReference = 92E823161E4C22F200DDFFB9 /* fblamobileappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92E822EF1E4C22F200DDFFB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Gabe Zimbric";
+				TargetAttributes = {
+					92E822F61E4C22F200DDFFB9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H65Y924PHT;
+						ProvisioningStyle = Automatic;
+					};
+					92E8230A1E4C22F200DDFFB9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H65Y924PHT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 92E822F61E4C22F200DDFFB9;
+					};
+					92E823151E4C22F200DDFFB9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = H65Y924PHT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 92E822F61E4C22F200DDFFB9;
+					};
+				};
+			};
+			buildConfigurationList = 92E822F21E4C22F200DDFFB9 /* Build configuration list for PBXProject "fblamobileapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92E822EE1E4C22F200DDFFB9;
+			productRefGroup = 92E822F81E4C22F200DDFFB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92E822F61E4C22F200DDFFB9 /* fblamobileapp */,
+				92E8230A1E4C22F200DDFFB9 /* fblamobileappTests */,
+				92E823151E4C22F200DDFFB9 /* fblamobileappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92E822F51E4C22F200DDFFB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E823051E4C22F200DDFFB9 /* LaunchScreen.storyboard in Resources */,
+				92E823291E4C265500DDFFB9 /* GoogleService-Info.plist in Resources */,
+				92E823021E4C22F200DDFFB9 /* Assets.xcassets in Resources */,
+				92E823001E4C22F200DDFFB9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E823091E4C22F200DDFFB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E823141E4C22F200DDFFB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C5616DF427621EFC9C98C30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D891C34B2F922C7DDA1FC9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4B91108E0287BA7E603892A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fblamobileappTests/Pods-fblamobileappTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50B2DAAAABAF22FDCDDB39EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fblamobileapp/Pods-fblamobileapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56F02F3C47A85935DD413322 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71756E2230B53A5A1E2B17D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fblamobileapp/Pods-fblamobileapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2FE7259A70AB53372031FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fblamobileappUITests/Pods-fblamobileappUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A23AC1F2C0B504C0C56FFC82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fblamobileappUITests/Pods-fblamobileappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC600BB03EEE19091DCBC040 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fblamobileappTests/Pods-fblamobileappTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92E822F31E4C22F200DDFFB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */,
+				924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */,
+				92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */,
+				9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */,
+				9221D1CB1E4C31D7003FADBE /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E823071E4C22F200DDFFB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E823101E4C22F200DDFFB9 /* fblamobileappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E823121E4C22F200DDFFB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E8231B1E4C22F200DDFFB9 /* fblamobileappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92E8230D1E4C22F200DDFFB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E822F61E4C22F200DDFFB9 /* fblamobileapp */;
+			targetProxy = 92E8230C1E4C22F200DDFFB9 /* PBXContainerItemProxy */;
+		};
+		92E823181E4C22F200DDFFB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E822F61E4C22F200DDFFB9 /* fblamobileapp */;
+			targetProxy = 92E823171E4C22F200DDFFB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92E822FE1E4C22F200DDFFB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E822FF1E4C22F200DDFFB9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92E823041E4C22F200DDFFB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92E8231D1E4C22F200DDFFB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92E8231E1E4C22F200DDFFB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92E823201E4C22F200DDFFB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3022EBD6866806CC53B25EEA /* Pods-fblamobileapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		92E823211E4C22F200DDFFB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 222C24BCC423785D9A1C39CD /* Pods-fblamobileapp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		92E823231E4C22F200DDFFB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 589D1DDDE9611CD92B34B0F1 /* Pods-fblamobileappTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fblamobileapp.app/fblamobileapp";
+			};
+			name = Debug;
+		};
+		92E823241E4C22F200DDFFB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 812852EF7B284E4E18DBA037 /* Pods-fblamobileappTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fblamobileapp.app/fblamobileapp";
+			};
+			name = Release;
+		};
+		92E823261E4C22F200DDFFB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401EC1B061C3C8A92069EB5D /* Pods-fblamobileappUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = fblamobileapp;
+			};
+			name = Debug;
+		};
+		92E823271E4C22F200DDFFB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5AA02C271130E8593128781 /* Pods-fblamobileappUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = fblamobileapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92E822F21E4C22F200DDFFB9 /* Build configuration list for PBXProject "fblamobileapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E8231D1E4C22F200DDFFB9 /* Debug */,
+				92E8231E1E4C22F200DDFFB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E8231F1E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E823201E4C22F200DDFFB9 /* Debug */,
+				92E823211E4C22F200DDFFB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E823221E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E823231E4C22F200DDFFB9 /* Debug */,
+				92E823241E4C22F200DDFFB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E823251E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E823261E4C22F200DDFFB9 /* Debug */,
+				92E823271E4C22F200DDFFB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92E822EF1E4C22F200DDFFB9 /* Project object */;
+}
