@@ -29,6 +29,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+
+    @IBAction func reloadData(_ sender: Any) {
+        self.postsTableView.reloadData()
+        FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            if let postsDictionary = snapshot.value as? [String: AnyObject] {
+                for post in postsDictionary {
+                    self.posts.add(post.value)
+                }
+                self.postsTableView.reloadData()
+            }
+        })
+    }
     
     func loadData() {
         FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -210,11 +211,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="bJd-Ee-ptw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4mz-gw-buz">
-                            <connections>
-                                <segue destination="SjB-kc-9g3" kind="show" id="qVp-8P-4qc"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="4mz-gw-buz">
+                                <connections>
+                                    <segue destination="SjB-kc-9g3" kind="show" id="qVp-8P-4qc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="WDX-kM-z6y">
+                                <connections>
+                                    <action selector="reloadData:" destination="RtW-ad-NN6" id="4eA-VX-tFP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="postsTableView" destination="SQb-qA-5Hh" id="2Pf-DV-90S"/>
@@ -241,7 +249,6 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="62f-Tm-MEL"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="141" id="H1e-XO-aXB"/>
                                     <constraint firstAttribute="width" constant="274" id="XG3-bT-E6g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -272,7 +279,7 @@
                                 <rect key="frame" x="29" y="326" width="316" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Suggested Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryO-SD-Egh">
                                 <rect key="frame" x="29" y="384" width="150" height="30"/>
@@ -281,13 +288,13 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Rating (1-10)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXK-8A-hLR">
                                 <rect key="frame" x="195" y="384" width="150" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

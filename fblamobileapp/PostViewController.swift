@@ -22,8 +22,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +35,9 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         picker.delegate = self
         self.present(picker, animated: true, completion: nil)
     }
+    
+    
+    
     
     func RandomStringwithLength(length: Int) -> NSString {
         let characters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
@@ -53,12 +55,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func uploadImage(image: UIImage) {
         let randomName = RandomStringwithLength(length: 10)
         let imageData = UIImageJPEGRepresentation(image, 1.0)
-        let uploadRef = FIRStorage.storage().reference().child("images/\(randomName).jpg")
+        let uploadRef = FIRStorage.storage().reference().child("images/\(randomName).jpeg")
         
         let uploadTask = uploadRef.put(imageData!, metadata: nil) {metadata, error in
             if error == nil {
                 print("Image added to post successfully.")
-                self.imageFileName = "\(randomName as String).jpg"
+                self.imageFileName = "\(randomName as String).jpeg"
             } else {
                 print("Error adding image: \(error?.localizedDescription)")
             }
@@ -112,7 +114,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
     }
-
     /*
     // MARK: - Navigation
 
