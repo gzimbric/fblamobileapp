@@ -10,6 +10,7 @@ target 'fblamobileapp' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database’
+pod 'Firebase/Storage’
 
   target 'fblamobileappTests' do
     inherit! :search_paths
