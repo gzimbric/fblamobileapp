@@ -10,10 +10,11 @@
 		31C17894119B5D264E8DD439 /* Pods_fblamobileapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */; };
 		46C8E89439FA49ADC5ABD7F3 /* Pods_fblamobileappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */; };
 		9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */; };
-		9221D1CB1E4C31D7003FADBE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1CA1E4C31D7003FADBE /* HomeViewController.swift */; };
 		9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1CC1E4C3386003FADBE /* LoginViewController.swift */; };
 		924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376651E4C36760004DEB4 /* PasswordResetViewController.swift */; };
 		924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376671E4D3E5F0004DEB4 /* PostViewController.swift */; };
+		92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */; };
+		92CFAF531E4D5F1400BE00DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF521E4D5F1400BE00DB /* MainViewController.swift */; };
 		92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */; };
 		92E823001E4C22F200DDFFB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E822FE1E4C22F200DDFFB9 /* Main.storyboard */; };
 		92E823021E4C22F200DDFFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E823011E4C22F200DDFFB9 /* Assets.xcassets */; };
@@ -51,10 +52,11 @@
 		812852EF7B284E4E18DBA037 /* Pods-fblamobileappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileappTests/Pods-fblamobileappTests.release.xcconfig"; sourceTree = "<group>"; };
 		88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		9221D1CA1E4C31D7003FADBE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9221D1CC1E4C3386003FADBE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		924376651E4C36760004DEB4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		924376671E4D3E5F0004DEB4 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		92CFAF521E4D5F1400BE00DB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fblamobileapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E822FF1E4C22F200DDFFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,12 +126,13 @@
 		92E822F91E4C22F200DDFFB9 /* fblamobileapp */ = {
 			isa = PBXGroup;
 			children = (
+				92CFAF521E4D5F1400BE00DB /* MainViewController.swift */,
 				92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */,
 				9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */,
 				9221D1CC1E4C3386003FADBE /* LoginViewController.swift */,
 				924376651E4C36760004DEB4 /* PasswordResetViewController.swift */,
-				9221D1CA1E4C31D7003FADBE /* HomeViewController.swift */,
 				924376671E4D3E5F0004DEB4 /* PostViewController.swift */,
+				92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */,
 				92E822FE1E4C22F200DDFFB9 /* Main.storyboard */,
 				92E823011E4C22F200DDFFB9 /* Assets.xcassets */,
 				92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */,
@@ -465,12 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */,
 				924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */,
 				9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */,
 				924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */,
 				92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */,
 				9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */,
-				9221D1CB1E4C31D7003FADBE /* HomeViewController.swift in Sources */,
+				92CFAF531E4D5F1400BE00DB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

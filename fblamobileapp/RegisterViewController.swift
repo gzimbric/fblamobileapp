@@ -3,7 +3,7 @@
 //  fblamobileapp
 //
 //  Created by Gabe Zimbric on 2/8/17.
-//  Copyright © 2017 Gabe Zimbric. All rights reserved.
+//
 //
 
 import UIKit

@@ -3,7 +3,7 @@
 //  fblamobileapp
 //
 //  Created by Gabe Zimbric on 2/8/17.
-//  Copyright © 2017 Gabe Zimbric. All rights reserved.
+//
 //
 
 import UIKit
@@ -13,6 +13,16 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if FIRAuth.auth()?.currentUser != nil {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: false, completion: nil)
+        }
+    }
+    
     @IBAction func loginAction(_ sender: AnyObject) {
         
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
