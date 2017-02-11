@@ -17,12 +17,34 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var selectImageButton: UIButton!
+    @IBOutlet weak var submitImageButton: UIButton!
     
     var imageFileName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.        
+        // Do any additional setup after loading the view.
+        self.descriptionTextView.layer.cornerRadius = 5
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PostViewController.dismissKeyboard)))
+        
+        self.titleTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.priceTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.ratingTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.titleTextField.alpha = 0.70
+        self.priceTextField.alpha = 0.70
+        self.ratingTextField.alpha = 0.70
+        self.descriptionTextView.alpha = 0.70
+        self.selectImageButton.alpha = 0.70
+        self.submitImageButton.alpha = 0.70
+        self.selectImageButton.layer.cornerRadius = 5
+        self.submitImageButton.layer.cornerRadius = 5
+    }
+    
+    func dismissKeyboard() {
+        titleTextField.resignFirstResponder()
+        priceTextField.resignFirstResponder()
+        descriptionTextView.resignFirstResponder()
+        ratingTextField.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,33 +109,55 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBAction func postcomplete(_ sender: Any) {
         
+        if (self.imageFileName != "") {
+        
         if let uid = FIRAuth.auth()?.currentUser?.uid {
-            if let title = titleTextField.text {
-                if let price = priceTextField.text {
-                    if let rating = ratingTextField.text {
-                        if let description = descriptionTextView.text {
-                            let postObject: Dictionary<String, Any> = [
-                                "uid": uid,
-                                "title": title,
-                                "price": price,
-                                "rating": rating,
-                                "description": description,
-                                "image": imageFileName
-                            ]
-                            
-                            FIRDatabase.database().reference().child("posts").childByAutoId().setValue(postObject)
-                            
-                            let alert = UIAlertController(title: "Success", message: "Your post was successfully created.", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
-                            
-                            print("Successfully Posted.")
+            
+            FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let userDictionary = snapshot.value as? [String: AnyObject] {
+                for user in userDictionary {
+                    if let username = user.value as? String {
+                        if let title = self.titleTextField.text {
+                            if let price = self.priceTextField.text {
+                                if let rating = self.ratingTextField.text {
+                                    if let description = self.descriptionTextView.text {
+                                        let postObject: Dictionary<String, Any> = [
+                                            "uid": uid,
+                                            "title": title,
+                                            "price": price,
+                                            "rating": rating,
+                                            "description": description,
+                                            "username" : username,
+                                            "image": self.imageFileName
+                                        ]
+                                        
+                                        FIRDatabase.database().reference().child("posts").childByAutoId().setValue(postObject)
+                                        
+                                        let alert = UIAlertController(title: "Success", message: "Your post was successfully created.", preferredStyle: .alert)
+                                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                                            self.present(vc!, animated: true, completion: nil)
+                                        }))
+                                        self.present(alert, animated: true, completion: {
+                                        })
+                                        
+                                        print("Successfully Posted.")
+                                    }
+                                }
+                            }
                         }
                     }
+                    }
                 }
-            }
+            })
         }
+    } else {
+            let alert = UIAlertController(title: "Please Wait", message: "The image has not finished processing yet, please wait", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
     }
+}
+    
     /*
     // MARK: - Navigation
 

@@ -13,7 +13,13 @@ import FirebaseAuth
 class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    
     @IBAction func createAccountAction(_ sender: AnyObject) {
+        
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        let email = emailTextField.text
         
         //Tells user that either there is nothing in the email text field
         if emailTextField.text == "" {
@@ -25,16 +31,23 @@ class RegisterViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
             
         } else {
-            FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            FIRAuth.auth()?.createUser(withEmail: email!, password: password!) { (user, error) in
                 
                 if error == nil {
                     
                     //Console message for successful registration
                     print("Sign up successful.")
                     
-                    //Go to the success screen if registration works
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    self.present(vc!, animated: true, completion: nil)
+                    // Store username
+                    if let uid = FIRAuth.auth()?.currentUser?.uid {
+                        let userRef = FIRDatabase.database().reference().child("users").child(uid)
+                        let object = ["username": username]
+                        userRef.setValue(object)
+                        
+                        //Go to the success screen if registration works
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                        self.present(vc!, animated: true, completion: nil)
+                    }
                     
                 } else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

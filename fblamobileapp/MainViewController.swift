@@ -20,18 +20,27 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
-        
         loadData()
-
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        self.postsTableView.insertSubview(refreshControl, at: 0)
+        
+        if #available(iOS 10.0, *) {
+            postsTableView.refreshControl = refreshControl
+        } else {
+            postsTableView.backgroundView = refreshControl
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    @IBAction func reloadData(_ sender: Any) {
-        self.postsTableView.reloadData()
+    
+    func refresh(_ refreshControl: UIRefreshControl) {
+        posts.removeAllObjects()
         FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {
             (snapshot) in
             if let postsDictionary = snapshot.value as? [String: AnyObject] {
@@ -39,6 +48,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.posts.add(post.value)
                 }
                 self.postsTableView.reloadData()
+        // Do your job, when done:
+        refreshControl.endRefreshing()
             }
         })
     }
@@ -65,6 +76,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // pass any object as parameter, i.e. the tapped row
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

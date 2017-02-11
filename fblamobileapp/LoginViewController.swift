@@ -13,6 +13,9 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var resetAccountButton: UIButton!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -21,6 +24,17 @@ class LoginViewController: UIViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
             self.present(vc!, animated: false, completion: nil)
         }
+        self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.passwordTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.emailTextField.alpha = 0.70
+        self.passwordTextField.alpha = 0.70
+        self.loginButton.layer.cornerRadius = 5
+        self.loginButton.alpha = 0.70
+        self.resetAccountButton.layer.cornerRadius = 5
+        self.resetAccountButton.alpha = 0.70
+        self.createAccountButton.layer.cornerRadius = 5
+        self.createAccountButton.alpha = 0.70
+        
     }
     
     @IBAction func loginAction(_ sender: AnyObject) {

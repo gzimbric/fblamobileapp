@@ -15,6 +15,8 @@
 		924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376671E4D3E5F0004DEB4 /* PostViewController.swift */; };
 		92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */; };
 		92CFAF531E4D5F1400BE00DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF521E4D5F1400BE00DB /* MainViewController.swift */; };
+		92CFAF571E4E8E2500BE00DB /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */; };
+		92CFAF591E4EAC0100BE00DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF581E4EAC0100BE00DB /* DetailsViewController.swift */; };
 		92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */; };
 		92E823001E4C22F200DDFFB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92E822FE1E4C22F200DDFFB9 /* Main.storyboard */; };
 		92E823021E4C22F200DDFFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E823011E4C22F200DDFFB9 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		924376671E4D3E5F0004DEB4 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		92CFAF521E4D5F1400BE00DB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		92CFAF581E4EAC0100BE00DB /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fblamobileapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92E822FF1E4C22F200DDFFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,10 +133,12 @@
 				92CFAF521E4D5F1400BE00DB /* MainViewController.swift */,
 				92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */,
 				9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */,
+				92CFAF581E4EAC0100BE00DB /* DetailsViewController.swift */,
 				9221D1CC1E4C3386003FADBE /* LoginViewController.swift */,
 				924376651E4C36760004DEB4 /* PasswordResetViewController.swift */,
 				924376671E4D3E5F0004DEB4 /* PostViewController.swift */,
 				92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */,
+				92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */,
 				92E822FE1E4C22F200DDFFB9 /* Main.storyboard */,
 				92E823011E4C22F200DDFFB9 /* Assets.xcassets */,
 				92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */,
@@ -468,7 +474,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CFAF571E4E8E2500BE00DB /* ProfileTableViewController.swift in Sources */,
 				92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */,
+				92CFAF591E4EAC0100BE00DB /* DetailsViewController.swift in Sources */,
 				924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */,
 				9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */,
 				924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */,
