@@ -14,6 +14,36 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var returnButton: UIButton!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if FIRAuth.auth()?.currentUser != nil {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: false, completion: nil)
+        }
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard)))
+        
+        self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.passwordTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.usernameTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.emailTextField.alpha = 0.70
+        self.passwordTextField.alpha = 0.70
+        self.usernameTextField.alpha = 0.70
+        self.registerButton.layer.cornerRadius = 5
+        self.registerButton.alpha = 0.70
+        self.returnButton.alpha = 0.70
+        self.returnButton.layer.cornerRadius = 5
+    }
+    
+    func dismissKeyboard() {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        usernameTextField.resignFirstResponder()
+    }
     
     @IBAction func createAccountAction(_ sender: AnyObject) {
         

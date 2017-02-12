@@ -12,6 +12,31 @@ import FirebaseAuth
 
 class PasswordResetViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var returnButton: UIButton!
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if FIRAuth.auth()?.currentUser != nil {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+            self.present(vc!, animated: false, completion: nil)
+        }
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PasswordResetViewController.dismissKeyboard)))
+        
+        self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
+        self.emailTextField.alpha = 0.70
+        self.resetButton.layer.cornerRadius = 5
+        self.resetButton.alpha = 0.70
+        self.returnButton.alpha = 0.70
+        self.returnButton.layer.cornerRadius = 5
+    }
+    
+    func dismissKeyboard() {
+        emailTextField.resignFirstResponder()
+    }
+    
     @IBAction func submitAction(_ sender: AnyObject) {
         
         if self.emailTextField.text == "" {

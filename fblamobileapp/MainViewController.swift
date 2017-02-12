@@ -20,38 +20,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
+        
         loadData()
-        
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
-        self.postsTableView.insertSubview(refreshControl, at: 0)
-        
-        if #available(iOS 10.0, *) {
-            postsTableView.refreshControl = refreshControl
-        } else {
-            postsTableView.backgroundView = refreshControl
-        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    func refresh(_ refreshControl: UIRefreshControl) {
-        posts.removeAllObjects()
-        FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {
-            (snapshot) in
-            if let postsDictionary = snapshot.value as? [String: AnyObject] {
-                for post in postsDictionary {
-                    self.posts.add(post.value)
-                }
-                self.postsTableView.reloadData()
-        // Do your job, when done:
-        refreshControl.endRefreshing()
-            }
-        })
     }
     
     func loadData() {
@@ -119,19 +95,30 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             })
         }
-
         return cell
     }
 
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = self.postsTableView.indexPathForSelectedRow {
+                let post = posts[indexPath.row] as! [String: AnyObject]
+                let shoeSize = post["price"] as? String
+                let controller = (segue.destination as!
+                    UINavigationController).topViewController as! DetailsViewController
+                controller.detailItem = shoeSize
+            }
+        }
+    }
+    *\
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
-    /*
+ 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -141,31 +128,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
-    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    */
-
-    /*
+ 
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ *\
+ }*/
 }

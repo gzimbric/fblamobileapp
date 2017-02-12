@@ -14,13 +14,6 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {
-            (snapshot) in
-            if let postsDictionary = snapshot.value as? [String: AnyObject] {
-                    self.priceLabel.text = postsDictionary["price"] as? String
-            }
-        })
         // Do any additional setup after loading the view.
     }
 
@@ -28,7 +21,7 @@ class DetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
