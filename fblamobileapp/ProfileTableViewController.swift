@@ -3,7 +3,7 @@
 //  fblamobileapp
 //
 //  Created by Gabe Zimbric on 2/10/17.
-//  Copyright © 2017 Gabe Zimbric. All rights reserved.
+// 
 //
 
 import UIKit
@@ -17,6 +17,7 @@ class ProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Shows username of user logged in
         let uid = FIRAuth.auth()?.currentUser?.uid
         FIRDatabase.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
@@ -37,6 +38,7 @@ class ProfileTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Logs user out on button tap
     @IBAction func logoutButtonTapped(_ sender: Any) {
         do {
             try FIRAuth.auth()?.signOut()

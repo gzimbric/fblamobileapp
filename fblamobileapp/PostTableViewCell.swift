@@ -15,6 +15,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var condLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

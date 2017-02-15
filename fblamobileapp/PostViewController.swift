@@ -17,9 +17,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var selectImageButton: UIButton!
-    @IBOutlet weak var submitImageButton: UIButton!
     
     var imageFileName = ""
+    
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +36,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.ratingTextField.alpha = 0.70
         self.descriptionTextView.alpha = 0.70
         self.selectImageButton.alpha = 0.70
-        self.submitImageButton.alpha = 0.70
         self.selectImageButton.layer.cornerRadius = 5
-        self.submitImageButton.layer.cornerRadius = 5
     }
     
+    // Enables tap to dismiss keyboard
     func dismissKeyboard() {
         titleTextField.resignFirstResponder()
         priceTextField.resignFirstResponder()
@@ -52,6 +52,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Dispose of any resources that can be recreated.
     }
     
+    // Runs imagePicker when button is tapped
     @IBAction func selectImageTapped(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -60,7 +61,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     
     
-    
+    // Generating Post ID for Firebase
     func RandomStringwithLength(length: Int) -> NSString {
         let characters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
         var randomString: NSMutableString = NSMutableString(capacity: length)
@@ -74,6 +75,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         return randomString
     }
     
+    // Upload image to server
     func uploadImage(image: UIImage) {
         let randomName = RandomStringwithLength(length: 10)
         let imageData = UIImageJPEGRepresentation(image, 1.0)
@@ -89,16 +91,20 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    
+    // Dismisses imagePickerController if user cancels operation
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // Runs when user cancels image pick operation
         picker.dismiss(animated: true, completion: nil)
     }
     
+    // Displays imagePickerController and runs uploadImage
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // Runs when user is picking image from library
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.previewImageView.image = pickedImage
+            self.imagePicker.allowsEditing = true
+            self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
             self.selectImageButton.isEnabled = false
             self.selectImageButton.isHidden = true
             uploadImage(image: pickedImage)
@@ -106,13 +112,14 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    
-    @IBAction func postcomplete(_ sender: Any) {
+    // Runs when 'Submit Post' button is tapped
+    @IBAction func postComplete(_ sender: Any) {
         
         if (self.imageFileName != "") {
         
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             
+            // Submits uiTextField values to Firebase Database
             FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let userDictionary = snapshot.value as? [String: AnyObject] {
                 for user in userDictionary {
@@ -151,7 +158,9 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             })
         }
-    } else {
+    }
+           // Displays message if iamge has not finished uploading to server
+        else {
             let alert = UIAlertController(title: "Please Wait", message: "The image has not finished processing yet, please wait", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)

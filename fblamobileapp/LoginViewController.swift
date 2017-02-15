@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
+        // Returns user to Home ViewController if already logged in
         if FIRAuth.auth()?.currentUser != nil {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
             self.present(vc!, animated: false, completion: nil)
@@ -44,6 +45,7 @@ class LoginViewController: UIViewController {
         passwordTextField.resignFirstResponder()
     }
     
+    // Logs user in using Firebase
     @IBAction func loginAction(_ sender: AnyObject) {
         
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {

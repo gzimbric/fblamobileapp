@@ -18,11 +18,6 @@ class PasswordResetViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
-        if FIRAuth.auth()?.currentUser != nil {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-            self.present(vc!, animated: false, completion: nil)
-        }
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PasswordResetViewController.dismissKeyboard)))
         
         self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
@@ -37,6 +32,7 @@ class PasswordResetViewController: UIViewController {
         emailTextField.resignFirstResponder()
     }
     
+    // Sends email to server for password reset
     @IBAction func submitAction(_ sender: AnyObject) {
         
         if self.emailTextField.text == "" {

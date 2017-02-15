@@ -3,7 +3,7 @@
 //  fblamobileapp
 //
 //  Created by Gabe Zimbric on 2/10/17.
-//  Copyright © 2017 Gabe Zimbric. All rights reserved.
+// 
 //
 
 import UIKit
@@ -11,10 +11,9 @@ import Firebase
 
 class DetailsViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

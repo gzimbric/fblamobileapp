@@ -30,6 +30,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    // Loads post database from Firebase
     func loadData() {
         FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {
             (snapshot) in
@@ -63,6 +64,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return self.posts.count
     }
 
+    // Displays posts in postsTableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         // Configure the cell...
@@ -71,6 +73,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.priceLabel.text = post["price"] as? String
         cell.conditionLabel.text = post["rating"] as? String
         cell.contentTextView.text = post["description"] as? String
+        cell.userLabel.text = post["username"] as? String
         if let imageName = post["image"] as? String {
             let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
             imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
@@ -97,6 +100,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         return cell
     }
+    
+    
 
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

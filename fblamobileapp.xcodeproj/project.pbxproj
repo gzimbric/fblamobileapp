@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		31C17894119B5D264E8DD439 /* Pods_fblamobileapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */; };
 		46C8E89439FA49ADC5ABD7F3 /* Pods_fblamobileappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */; };
+		921B25E81E5404C400303859 /* UserPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B25E71E5404C400303859 /* UserPostsTableViewCell.swift */; };
+		921B25EC1E54067900303859 /* UserPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B25EB1E54067900303859 /* UserPostsViewController.swift */; };
 		9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */; };
 		9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1CC1E4C3386003FADBE /* LoginViewController.swift */; };
 		924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376651E4C36760004DEB4 /* PasswordResetViewController.swift */; };
@@ -53,6 +55,8 @@
 		743078D869DDC8ABD809349E /* Pods_fblamobileappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		812852EF7B284E4E18DBA037 /* Pods-fblamobileappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileappTests/Pods-fblamobileappTests.release.xcconfig"; sourceTree = "<group>"; };
 		88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		921B25E71E5404C400303859 /* UserPostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPostsTableViewCell.swift; sourceTree = "<group>"; };
+		921B25EB1E54067900303859 /* UserPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPostsViewController.swift; sourceTree = "<group>"; };
 		9221D1C81E4C27E4003FADBE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9221D1CC1E4C3386003FADBE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		924376651E4C36760004DEB4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				924376671E4D3E5F0004DEB4 /* PostViewController.swift */,
 				92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */,
 				92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */,
+				921B25EB1E54067900303859 /* UserPostsViewController.swift */,
+				921B25E71E5404C400303859 /* UserPostsTableViewCell.swift */,
 				92E822FE1E4C22F200DDFFB9 /* Main.storyboard */,
 				92E823011E4C22F200DDFFB9 /* Assets.xcassets */,
 				92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */,
@@ -478,10 +484,12 @@
 				92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */,
 				92CFAF591E4EAC0100BE00DB /* DetailsViewController.swift in Sources */,
 				924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */,
+				921B25E81E5404C400303859 /* UserPostsTableViewCell.swift in Sources */,
 				9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */,
 				924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */,
 				92E866C51E4FE4F000F06210 /* MainViewController.swift in Sources */,
 				92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */,
+				921B25EC1E54067900303859 /* UserPostsViewController.swift in Sources */,
 				9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

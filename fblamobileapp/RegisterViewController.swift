@@ -45,6 +45,7 @@ class RegisterViewController: UIViewController {
         usernameTextField.resignFirstResponder()
     }
     
+    // Create new user account
     @IBAction func createAccountAction(_ sender: AnyObject) {
         
         let username = usernameTextField.text
@@ -79,7 +80,9 @@ class RegisterViewController: UIViewController {
                         self.present(vc!, animated: true, completion: nil)
                     }
                     
-                } else {
+                }
+                // Shows error if there is one from Firebase
+                else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
