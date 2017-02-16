@@ -12,6 +12,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database’
 pod 'Firebase/Storage’
 pod 'TOCropViewController'
+pod 'Firebase/RemoteConfig'
 
   target 'fblamobileappTests' do
     inherit! :search_paths

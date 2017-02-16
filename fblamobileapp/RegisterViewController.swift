@@ -27,9 +27,6 @@ class RegisterViewController: UIViewController {
         }
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard)))
         
-        self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
-        self.passwordTextField.borderStyle = UITextBorderStyle.roundedRect
-        self.usernameTextField.borderStyle = UITextBorderStyle.roundedRect
         self.emailTextField.alpha = 0.70
         self.passwordTextField.alpha = 0.70
         self.usernameTextField.alpha = 0.70

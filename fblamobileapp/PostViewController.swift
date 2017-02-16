@@ -22,6 +22,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let imagePicker = UIImagePickerController()
     
+    let postID = FIRDatabase.database().reference().childByAutoId()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -135,6 +137,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                             "rating": rating,
                                             "description": description,
                                             "username" : username,
+                                            "postID": self.postID,
                                             "image": self.imageFileName
                                         ]
                                         

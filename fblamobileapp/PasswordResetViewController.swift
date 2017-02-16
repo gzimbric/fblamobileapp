@@ -20,7 +20,6 @@ class PasswordResetViewController: UIViewController {
         super.viewDidAppear(true)
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PasswordResetViewController.dismissKeyboard)))
         
-        self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
         self.emailTextField.alpha = 0.70
         self.resetButton.layer.cornerRadius = 5
         self.resetButton.alpha = 0.70

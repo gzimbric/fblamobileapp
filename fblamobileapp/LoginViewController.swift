@@ -27,8 +27,6 @@ class LoginViewController: UIViewController {
         }
             self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard)))
 
-        self.emailTextField.borderStyle = UITextBorderStyle.roundedRect
-        self.passwordTextField.borderStyle = UITextBorderStyle.roundedRect
         self.emailTextField.alpha = 0.70
         self.passwordTextField.alpha = 0.70
         self.loginButton.layer.cornerRadius = 5
