@@ -101,18 +101,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.postsTableView.indexPathForSelectedRow {
-                let aUser = snapshot[indexPath.row]
-                let shoeSize = aUser.shoeSize
-                let controller = (segue.destination as!
-                    UINavigationController).topViewController as! DetailViewController
-                controller.shoeSize = shoeSize
-            }
-        }
-    }
-    
     
 
     /*
