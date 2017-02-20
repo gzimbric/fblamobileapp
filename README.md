@@ -16,17 +16,17 @@ Already Implemented:
  - User stays logged in after logging in
  - Basic Image and Text Posting
  - Somewhat functional refresh button
+ - Implement log out
+ - Implement usernames
+ - Fix minimize keyboard issue
+ - Implement full UI
+ - Decide on app name
+ - Create artwork (Logo, appicon, etc)
 
 TO-DO List:
 
  - Fix refresh button
  - Add secondary page to cell and move post details and condition to that page
  - Implement private messaging
- - Implement log out
- - Implement usernames
- - Fix minimize keyboard issue
  - Possibly add 'Take Photo' option when adding image to post
- - Implent full UI
- - Decide on app name
- - Create artwork (Logo, appicon, etc)
  - Possibly add edit function for owner of post
