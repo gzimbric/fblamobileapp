@@ -22,7 +22,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let imagePicker = UIImagePickerController()
     
-    let postID = FIRDatabase.database().reference().childByAutoId()
+    let postID = UUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,9 +104,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Runs when user is picking image from library
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.previewImageView.image = pickedImage
-            self.imagePicker.allowsEditing = true
-            self.imagePicker.sourceType = .camera
-            self.present(self.imagePicker, animated: true, completion: nil)
             self.selectImageButton.isEnabled = false
             self.selectImageButton.isHidden = true
             uploadImage(image: pickedImage)
@@ -141,7 +138,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                             "image": self.imageFileName
                                         ]
                                         
-                                        FIRDatabase.database().reference().child("posts").childByAutoId().setValue(postObject)
+                                        FIRDatabase.database().reference().child("posts").child(self.postID).setValue(postObject)
                                         
                                         let alert = UIAlertController(title: "Success", message: "Your post was successfully created.", preferredStyle: .alert)
                                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in

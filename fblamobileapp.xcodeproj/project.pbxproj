@@ -15,6 +15,9 @@
 		9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221D1CC1E4C3386003FADBE /* LoginViewController.swift */; };
 		924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376651E4C36760004DEB4 /* PasswordResetViewController.swift */; };
 		924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376671E4D3E5F0004DEB4 /* PostViewController.swift */; };
+		929312391E5A8E30006D22A4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929312381E5A8E30006D22A4 /* Comment.swift */; };
+		9293123B1E5AA056006D22A4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293123A1E5AA056006D22A4 /* Post.swift */; };
+		9293123D1E5D141E006D22A4 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293123C1E5D141E006D22A4 /* PostDetailsViewController.swift */; };
 		92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */; };
 		92CFAF571E4E8E2500BE00DB /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */; };
 		92CFAF591E4EAC0100BE00DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF581E4EAC0100BE00DB /* DetailsViewController.swift */; };
@@ -61,6 +64,9 @@
 		9221D1CC1E4C3386003FADBE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		924376651E4C36760004DEB4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		924376671E4D3E5F0004DEB4 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		929312381E5A8E30006D22A4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9293123A1E5AA056006D22A4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9293123C1E5D141E006D22A4 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		92CFAF581E4EAC0100BE00DB /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,9 @@
 				92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */,
 				921B25EB1E54067900303859 /* UserPostsViewController.swift */,
 				921B25E71E5404C400303859 /* UserPostsTableViewCell.swift */,
+				9293123A1E5AA056006D22A4 /* Post.swift */,
+				929312381E5A8E30006D22A4 /* Comment.swift */,
+				9293123C1E5D141E006D22A4 /* PostDetailsViewController.swift */,
 				92E822FE1E4C22F200DDFFB9 /* Main.storyboard */,
 				92E823011E4C22F200DDFFB9 /* Assets.xcassets */,
 				92E823031E4C22F200DDFFB9 /* LaunchScreen.storyboard */,
@@ -483,10 +492,13 @@
 				92CFAF571E4E8E2500BE00DB /* ProfileTableViewController.swift in Sources */,
 				92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */,
 				92CFAF591E4EAC0100BE00DB /* DetailsViewController.swift in Sources */,
+				929312391E5A8E30006D22A4 /* Comment.swift in Sources */,
 				924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */,
 				921B25E81E5404C400303859 /* UserPostsTableViewCell.swift in Sources */,
 				9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */,
 				924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */,
+				9293123B1E5AA056006D22A4 /* Post.swift in Sources */,
+				9293123D1E5D141E006D22A4 /* PostDetailsViewController.swift in Sources */,
 				92E866C51E4FE4F000F06210 /* MainViewController.swift in Sources */,
 				92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */,
 				921B25EC1E54067900303859 /* UserPostsViewController.swift in Sources */,

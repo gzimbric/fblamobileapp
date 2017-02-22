@@ -14,6 +14,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var postsTableView: UITableView!
     
     var posts = NSMutableArray()
+    var postDetails = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // pass any object as parameter, i.e. the tapped row
+            performSegue(withIdentifier: "showDetails", sender: self)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,21 +102,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    
-
-    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "showDetails" {
             if let indexPath = self.postsTableView.indexPathForSelectedRow {
                 let post = posts[indexPath.row] as! [String: AnyObject]
-                let shoeSize = post["price"] as? String
-                let controller = (segue.destination as!
-                    UINavigationController).topViewController as! DetailsViewController
-                controller.detailItem = shoeSize
+                let postDetails = post["postID"] as? String
+                let controller = segue.destination as! PostDetailsViewController
+                controller.postDetails = postDetails
             }
         }
     }
-    *\
     
     /*
     // Override to support conditional editing of the table view.
@@ -145,6 +141,4 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return true
     }
     */
- *\
- }*/
 }
