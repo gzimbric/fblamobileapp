@@ -34,8 +34,12 @@ class PostDetailsViewController: UIViewController {
                     let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
                     imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
                         let image = UIImage(data: data!)
+                        self.postImageView.alpha = 0
+                        UIView.animate(withDuration: 0.4, animations: {
+                            self.postImageView.alpha = 1
                         self.postImageView.image = image
                         }
+                        )}
                     })
                 }
             }

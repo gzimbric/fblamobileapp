@@ -11,22 +11,23 @@ Features
 -------------
 Already Implemented:
 
- - Authentication
+ - Authentication (Over SSL)
  - Login, Register, and Frogot pages
  - User stays logged in after logging in
- - Basic Image and Text Posting
- - Somewhat functional refresh button
+ - Fully supported Image and Text Posting
  - Implement log out
  - Implement usernames
  - Fix minimize keyboard issue
  - Implement full UI
  - Decide on app name
  - Create artwork (Logo, appicon, etc)
+ - Full Slide-To-Refresh support
+ - Details page for each post displaying extra info
 
 TO-DO List:
 
- - Fix refresh button
- - Add secondary page to cell and move post details and condition to that page
- - Implement private messaging
+ - Implement private messaging/commenting
  - Possibly add 'Take Photo' option when adding image to post
  - Possibly add edit function for owner of post
+ - Fix image duplication
+ - Fix alpha refesh in login/register account/reset account

@@ -133,7 +133,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUH-ID-3YM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="95"/>
+            <point key="canvasLocation" x="1548" y="95"/>
         </scene>
         <!--Profile-->
         <scene sceneID="biA-Ph-tgt">
@@ -163,8 +163,8 @@
                                                         <action selector="logoutButtonTapped:" destination="Q7H-1d-rOn" eventType="touchUpInside" id="zPY-NH-eZy"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qob-EK-feS">
-                                                    <rect key="frame" x="43" y="35" width="37" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qob-EK-feS">
+                                                    <rect key="frame" x="42.999999999999993" y="35" width="70.333333333333314" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -317,12 +317,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Title..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfF-P6-BEE">
-                                                    <rect key="frame" x="22" y="17" width="146" height="27"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mhM-r5-eui">
                                                     <rect key="frame" x="22" y="58" width="370" height="371"/>
                                                     <constraints>
@@ -335,14 +329,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Title..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfF-P6-BEE">
+                                                    <rect key="frame" x="22" y="15" width="146" height="27"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mhM-r5-eui" firstAttribute="top" secondItem="O7k-3V-92u" secondAttribute="bottom" constant="15.67" id="H2b-iE-mrm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="O7k-3V-92u" secondAttribute="trailing" constant="15" id="M95-LU-msO"/>
-                                                <constraint firstItem="HfF-P6-BEE" firstAttribute="baseline" secondItem="O7k-3V-92u" secondAttribute="baseline" constant="1.3333333333333357" id="TaS-SU-bZm"/>
+                                                <constraint firstItem="HfF-P6-BEE" firstAttribute="baseline" secondItem="O7k-3V-92u" secondAttribute="baseline" constant="-0.6666666666666643" id="TaS-SU-bZm"/>
                                                 <constraint firstItem="HfF-P6-BEE" firstAttribute="leading" secondItem="mhM-r5-eui" secondAttribute="leading" id="UAf-Zk-gSL"/>
-                                                <constraint firstItem="HfF-P6-BEE" firstAttribute="top" secondItem="LyY-vV-Rs9" secondAttribute="topMargin" constant="9" id="ZTl-fo-0G3"/>
-                                                <constraint firstItem="HfF-P6-BEE" firstAttribute="centerY" secondItem="O7k-3V-92u" secondAttribute="centerY" constant="0.5" id="dh9-7b-gbW"/>
+                                                <constraint firstItem="HfF-P6-BEE" firstAttribute="top" secondItem="LyY-vV-Rs9" secondAttribute="topMargin" constant="7" id="ZTl-fo-0G3"/>
+                                                <constraint firstItem="HfF-P6-BEE" firstAttribute="centerY" secondItem="O7k-3V-92u" secondAttribute="centerY" constant="-1.5" id="dh9-7b-gbW"/>
                                                 <constraint firstItem="mhM-r5-eui" firstAttribute="leading" secondItem="LyY-vV-Rs9" secondAttribute="leadingMargin" constant="14" id="jbA-5q-j3t"/>
                                                 <constraint firstItem="mhM-r5-eui" firstAttribute="centerX" secondItem="LyY-vV-Rs9" secondAttribute="centerX" id="uZy-JS-jCt"/>
                                             </constraints>
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA6-ZT-cLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3018.840579710145" y="71.739130434782609"/>
+            <point key="canvasLocation" x="2964" y="95"/>
         </scene>
         <!--New Post-->
         <scene sceneID="ssf-50-QAP">
@@ -497,7 +497,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drp-hX-Pcm">
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drp-hX-Pcm">
                                 <rect key="frame" x="36" y="339" width="345" height="345"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="345" id="F2d-O2-odf"/>
@@ -602,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ve7-TD-H2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2999" y="-593"/>
+            <point key="canvasLocation" x="2964" y="-593"/>
         </scene>
         <!--Reset Password-->
         <scene sceneID="q6I-CX-QsF">
@@ -671,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3X-ig-WDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="355.07246376811599" y="851.9021739130435"/>
+            <point key="canvasLocation" x="87" y="851"/>
         </scene>
         <!--Create an Account-->
         <scene sceneID="8VS-IB-2iK">
@@ -771,7 +771,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bs-7T-E1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="851.42428785607206"/>
+            <point key="canvasLocation" x="797" y="850"/>
         </scene>
     </scenes>
     <resources>
@@ -779,6 +779,6 @@
         <image name="logo" width="295" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zkv-2d-mnm"/>
+        <segue reference="ZVX-cF-BTM"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -56,24 +56,27 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     // Runs imagePicker when button is tapped
     @IBAction func selectImageTapped(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        self.present(picker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
     
-    
-    
-    // Generating Post ID for Firebase
-    func RandomStringwithLength(length: Int) -> NSString {
-        let characters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
-        var randomString: NSMutableString = NSMutableString(capacity: length)
+    // Generating Random String for photo ID
+    func RandomStringwithLength(length: Int) -> String {
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
         
-        for i in 0..<length {
-            var len = UInt32(characters.length)
-            var rand = arc4random_uniform(len)
-            randomString.appendFormat("%C", characters.character(at: Int(rand)))
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
         }
-        
         return randomString
     }
     
@@ -113,9 +116,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     // Runs when 'Submit Post' button is tapped
     @IBAction func postComplete(_ sender: Any) {
-        
         if (self.imageFileName != "") {
-        
         if let uid = FIRAuth.auth()?.currentUser?.uid {
             
             // Submits uiTextField values to Firebase Database

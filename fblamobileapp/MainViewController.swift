@@ -15,20 +15,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var posts = NSMutableArray()
     var postDetails = ""
-
+    var indicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
         
         loadData()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+            self.postsTableView.insertSubview(refreshControl, at: 0)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     // Loads post database from Firebase
@@ -44,9 +47,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Slide to Refresh
+    func refresh(_ refreshControl: UIRefreshControl) {
+        posts.removeAllObjects()
+        FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: {
+            (snapshot) in
+            if let postsDictionary = snapshot.value as? [String: AnyObject] {
+                for post in postsDictionary {
+                    self.posts.add(post.value)
+                }
+                self.postsTableView.reloadData()
+                let when = DispatchTime.now() + 1
+                DispatchQueue.main.asyncAfter(deadline: when) {
+                    // Do your job, when done:
+                    refreshControl.endRefreshing()
+                }
+            }
+        })
     }
 
     // MARK: - Table view data source
@@ -76,9 +93,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
             imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
                 let image = UIImage(data: data!)
-                cell.titleLabel.alpha = 0
-                cell.postImageView.alpha = 0
-                cell.priceLabel.alpha = 0
                 UIView.animate(withDuration: 0.4, animations: {
                     cell.titleLabel.alpha = 1
                     cell.postImageView.alpha = 1
@@ -103,33 +117,4 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
- 
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
- 
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 }

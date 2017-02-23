@@ -72,11 +72,11 @@ class UserPostsViewController: UIViewController, UITableViewDelegate, UITableVie
             imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
                 let image = UIImage(data: data!)
                 cell.titleLabel.alpha = 0
-                cell.contentTextView.alpha = 0
+                cell.priceLabel.alpha = 0
                 cell.postImageView.alpha = 0
                 UIView.animate(withDuration: 0.4, animations: {
                     cell.titleLabel.alpha = 1
-                    cell.contentTextView.alpha = 1
+                    cell.priceLabel.alpha = 1
                     cell.postImageView.alpha = 1
                 })
             } else {
