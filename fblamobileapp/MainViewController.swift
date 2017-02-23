@@ -72,26 +72,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let post = self.posts[indexPath.row] as! [String: AnyObject]
         cell.titleLabel.text = post["title"] as? String
         cell.priceLabel.text = post["price"] as? String
-        cell.conditionLabel.text = post["rating"] as? String
-        cell.contentTextView.text = post["description"] as? String
-        cell.userLabel.text = post["username"] as? String
         if let imageName = post["image"] as? String {
             let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
             imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
                 let image = UIImage(data: data!)
                 cell.titleLabel.alpha = 0
-                cell.contentTextView.alpha = 0
                 cell.postImageView.alpha = 0
-                cell.conditionLabel.alpha = 0
                 cell.priceLabel.alpha = 0
-                cell.condLabel.alpha = 0
                 UIView.animate(withDuration: 0.4, animations: {
                     cell.titleLabel.alpha = 1
-                    cell.contentTextView.alpha = 1
                     cell.postImageView.alpha = 1
-                    cell.conditionLabel.alpha = 1
                     cell.priceLabel.alpha = 1
-                    cell.condLabel.alpha = 1
                 cell.postImageView.image = image
                 })
             } else {

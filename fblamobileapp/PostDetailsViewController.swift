@@ -11,8 +11,12 @@ import Firebase
 import FirebaseDatabase
 
 class PostDetailsViewController: UIViewController {
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var detailsTextView: UITextView!
+    
     var postDetails: String?
     
     override func viewDidLoad() {
@@ -21,7 +25,19 @@ class PostDetailsViewController: UIViewController {
         
         FIRDatabase.database().reference().child("posts").child(postDetails!).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                self.priceLabel.text = dictionary["postID"] as? String
+                self.title = dictionary["title"] as? String
+                self.priceLabel.text = dictionary["price"] as? String
+                self.ratingLabel.text = dictionary["rating"] as? String
+                self.usernameLabel.text = dictionary["username"] as? String
+                self.detailsTextView.text = dictionary["description"] as? String
+                if let imageName = dictionary["image"] as? String {
+                    let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
+                    imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
+                        let image = UIImage(data: data!)
+                        self.postImageView.image = image
+                        }
+                    })
+                }
             }
         })
     }

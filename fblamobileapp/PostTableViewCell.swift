@@ -22,9 +22,7 @@ class PostTableViewCell: UITableViewCell {
         // Initialization code
         self.titleLabel.alpha = 0
         self.postImageView.alpha = 0
-        self.contentTextView.alpha = 0
         self.priceLabel.alpha = 0
-        self.conditionLabel.alpha = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
