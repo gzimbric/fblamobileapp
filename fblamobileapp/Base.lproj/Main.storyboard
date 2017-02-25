@@ -339,7 +339,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="O7k-3V-92u" firstAttribute="top" secondItem="LyY-vV-Rs9" secondAttribute="topMargin" constant="10" id="Br1-8K-hzq"/>
                                                 <constraint firstItem="mhM-r5-eui" firstAttribute="top" secondItem="O7k-3V-92u" secondAttribute="bottom" constant="15.67" id="H2b-iE-mrm"/>
+                                                <constraint firstItem="mhM-r5-eui" firstAttribute="top" secondItem="HfF-P6-BEE" secondAttribute="bottom" constant="16" id="HlL-ga-vkb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="O7k-3V-92u" secondAttribute="trailing" constant="15" id="M95-LU-msO"/>
                                                 <constraint firstItem="HfF-P6-BEE" firstAttribute="baseline" secondItem="O7k-3V-92u" secondAttribute="baseline" constant="-0.6666666666666643" id="TaS-SU-bZm"/>
                                                 <constraint firstItem="HfF-P6-BEE" firstAttribute="leading" secondItem="mhM-r5-eui" secondAttribute="leading" id="UAf-Zk-gSL"/>
@@ -495,16 +497,12 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wjy-fo-0hI">
                                 <rect key="frame" x="33" y="188" width="347" height="123"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="123" id="Wj0-bi-lLP"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drp-hX-Pcm">
                                 <rect key="frame" x="36" y="339" width="345" height="345"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="345" id="F2d-O2-odf"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="306" id="RFj-Kh-iBU"/>
                                 </constraints>
                                 <variation key="default">
@@ -567,6 +565,7 @@
                             <constraint firstItem="Wjy-fo-0hI" firstAttribute="leading" secondItem="seH-gn-fwx" secondAttribute="leadingMargin" constant="13" id="Vez-qu-vq4"/>
                             <constraint firstItem="w7u-Bb-lgo" firstAttribute="top" secondItem="4Ev-rx-QJd" secondAttribute="bottom" constant="8" id="aoa-Ap-R0S"/>
                             <constraint firstItem="4Ev-rx-QJd" firstAttribute="top" secondItem="drp-hX-Pcm" secondAttribute="bottom" constant="-587" id="fMS-nZ-0Hc"/>
+                            <constraint firstItem="drp-hX-Pcm" firstAttribute="top" secondItem="Wjy-fo-0hI" secondAttribute="bottom" constant="28" id="fQK-DC-yrN"/>
                             <constraint firstItem="nO8-Gw-UzY" firstAttribute="centerX" secondItem="4Ev-rx-QJd" secondAttribute="centerX" constant="-2" id="g5H-EN-vQ8"/>
                             <constraint firstItem="Wjy-fo-0hI" firstAttribute="centerX" secondItem="nO8-Gw-UzY" secondAttribute="centerX" id="gDJ-tv-SsX"/>
                             <constraint firstItem="4Ev-rx-QJd" firstAttribute="top" secondItem="QmH-5t-YQT" secondAttribute="bottom" constant="33" id="jGb-jC-c6U"/>

@@ -105,7 +105,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // Displays imagePickerController and runs uploadImage
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // Runs when user is picking image from library
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.previewImageView.image = pickedImage
             self.selectImageButton.isEnabled = false
             self.selectImageButton.isHidden = true
