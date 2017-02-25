@@ -16,13 +16,11 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.titleLabel.alpha = 0
-        self.postImageView.alpha = 0
-        self.priceLabel.alpha = 0
+        postImageView.image = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        super.setSelected(selected, animated: false)
 
         // Configure the view for the selected state
     }

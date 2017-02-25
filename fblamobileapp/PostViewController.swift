@@ -140,16 +140,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                         ]
                                         
                                         FIRDatabase.database().reference().child("posts").child(self.postID).setValue(postObject)
-                                        
-                                        let alert = UIAlertController(title: "Success", message: "Your post was successfully created.", preferredStyle: .alert)
-                                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                                            self.present(vc!, animated: true, completion: nil)
-                                        }))
-                                        self.present(alert, animated: true, completion: {
-                                        })
-                                        
-                                        print("Successfully Posted.")
                                     }
                                 }
                             }
@@ -158,11 +148,50 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     }
                 }
             })
+            
+            FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let userDictionary = snapshot.value as? [String: AnyObject] {
+                    for user in userDictionary {
+                        if let username = user.value as? String {
+                            if let title = self.titleTextField.text {
+                                if let price = self.priceTextField.text {
+                                    if let rating = self.ratingTextField.text {
+                                        if let description = self.descriptionTextView.text {
+                                            let postObject: Dictionary<String, Any> = [
+                                                "uid": uid,
+                                                "title": title,
+                                                "price": price,
+                                                "rating": rating,
+                                                "description": description,
+                                                "username" : username,
+                                                "postID": self.postID,
+                                                "image": self.imageFileName
+                                            ]
+                                            
+                                            FIRDatabase.database().reference().child("userposts").child(uid).child(self.postID).setValue(postObject)
+                                            
+                                            let alert = UIAlertController(title: "Success", message: "Your post was successfully created.", preferredStyle: .alert)
+                                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                                                self.present(vc!, animated: true, completion: nil)
+                                            }))
+                                            self.present(alert, animated: true, completion: {
+                                            })
+                                            
+                                            print("Successfully Posted to UserPosts.")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            })
         }
     }
            // Displays message if iamge has not finished uploading to server
         else {
-            let alert = UIAlertController(title: "Please Wait", message: "The image has not finished processing yet, please wait", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Please Wait", message: "The image has not finished processing yet", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
     }

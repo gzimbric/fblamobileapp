@@ -14,17 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-fblamobileapp.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-fblamobileappTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-fblamobileappUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,12 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18190A6929D22E6D95477F31C2334EEE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>38EC9D3CEB7E8C362F999216D063B845</key>
+		<key>2A3DE5A0DF2FCFA59B0AFEE643989383</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,22 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>924C3FEAFAF288C4726E8C4E1152C538</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A271C05BDF79F9B31A71488EF32BE4E2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A45577F47F35C2FE301CFC00F56B0C86</key>
+		<key>85EF7E5EEF7C29E802633366216779FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EAAFDDD83F6EE1743DF17D360FF278A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

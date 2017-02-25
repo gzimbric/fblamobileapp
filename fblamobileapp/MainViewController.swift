@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import Kingfisher
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var postsTableView: UITableView!
@@ -27,6 +28,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let refreshControl = UIRefreshControl()
             refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
             self.postsTableView.insertSubview(refreshControl, at: 0)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,25 +89,22 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         // Configure the cell...
         let post = self.posts[indexPath.row] as! [String: AnyObject]
+        cell.selectionStyle = .none
         cell.titleLabel.text = post["title"] as? String
         cell.priceLabel.text = post["price"] as? String
         if let imageName = post["image"] as? String {
-            let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
-            imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
-                let image = UIImage(data: data!)
-                UIView.animate(withDuration: 0.4, animations: {
-                    cell.titleLabel.alpha = 1
-                    cell.postImageView.alpha = 1
-                    cell.priceLabel.alpha = 1
-                cell.postImageView.image = image
-                })
-            } else {
-                print("Error occured during image download: \(error?.localizedDescription)")
+            FIRStorage.storage().reference().child("images/\(imageName)").downloadURL(completion: {(url, error) in
+                guard let url = url else {
+                    return
                 }
+                let resource = ImageResource(downloadURL: url, cacheKey: imageName)
+                cell.postImageView.kf.indicatorType = .activity
+                cell.postImageView.kf.setImage(with: resource)
             })
         }
         return cell
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
