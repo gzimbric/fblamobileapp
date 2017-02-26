@@ -20,6 +20,34 @@
                ReferencedContainer = "container:fblamobileapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92E8230A1E4C22F200DDFFB9"
+               BuildableName = "fblamobileappTests.xctest"
+               BlueprintName = "fblamobileappTests"
+               ReferencedContainer = "container:fblamobileapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92E823151E4C22F200DDFFB9"
+               BuildableName = "fblamobileappUITests.xctest"
+               BlueprintName = "fblamobileappUITests"
+               ReferencedContainer = "container:fblamobileapp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +56,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92E8230A1E4C22F200DDFFB9"
-               BuildableName = "fblamobileappTests.xctest"
-               BlueprintName = "fblamobileappTests"
-               ReferencedContainer = "container:fblamobileapp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92E823151E4C22F200DDFFB9"
-               BuildableName = "fblamobileappUITests.xctest"
-               BlueprintName = "fblamobileappUITests"
-               ReferencedContainer = "container:fblamobileapp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

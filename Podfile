@@ -11,9 +11,6 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
-pod 'TOCropViewController'
-pod 'Firebase/RemoteConfig'
-pod 'Firebase/Messaging'
 pod 'Kingfisher', '~> 3.0'
 
 end
