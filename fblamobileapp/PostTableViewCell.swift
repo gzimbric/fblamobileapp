@@ -16,7 +16,12 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        postImageView.image = nil
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.postImageView.image = nil
+        // Set cell to initial state here, reset or set values
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

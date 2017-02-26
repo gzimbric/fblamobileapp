@@ -23,6 +23,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
         
+        self.postsTableView.estimatedRowHeight = 457
+        self.postsTableView.rowHeight = UITableViewAutomaticDimension
+        
         loadData()
         
         let refreshControl = UIRefreshControl()
@@ -80,7 +83,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.posts.count
     }
 
@@ -97,9 +99,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 guard let url = url else {
                     return
                 }
+                cell.postImageView.alpha = 0
+                UIView.animate(withDuration: 0.4, animations: {
+                    cell.postImageView.alpha = 1
                 let resource = ImageResource(downloadURL: url, cacheKey: imageName)
+                let processor = RoundCornerImageProcessor(cornerRadius: 40)
                 cell.postImageView.kf.indicatorType = .activity
-                cell.postImageView.kf.setImage(with: resource)
+                cell.postImageView.kf.setImage(with: resource, options: [.processor(processor)])
+                })
             })
         }
         return cell

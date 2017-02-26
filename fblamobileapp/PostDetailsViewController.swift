@@ -3,12 +3,13 @@
 //  fblamobileapp
 //
 //  Created by Gabe Zimbric on 2/21/17.
-//  Copyright © 2017 Gabe Zimbric. All rights reserved.
+// 
 //
 
 import UIKit
 import Firebase
 import FirebaseDatabase
+import Kingfisher
 
 class PostDetailsViewController: UIViewController {
     @IBOutlet weak var postImageView: UIImageView!
@@ -31,15 +32,18 @@ class PostDetailsViewController: UIViewController {
                 self.usernameLabel.text = dictionary["username"] as? String
                 self.detailsTextView.text = dictionary["description"] as? String
                 if let imageName = dictionary["image"] as? String {
-                    let imageRef = FIRStorage.storage().reference().child("images/\(imageName)")
-                    imageRef.data(withMaxSize: 25 * 1024 * 1024, completion: { (data, error) -> Void in if error == nil {
-                        let image = UIImage(data: data!)
+                    FIRStorage.storage().reference().child("images/\(imageName)").downloadURL(completion: {(url, error) in
+                        guard let url = url else {
+                            return
+                        }
                         self.postImageView.alpha = 0
                         UIView.animate(withDuration: 0.4, animations: {
                             self.postImageView.alpha = 1
-                        self.postImageView.image = image
-                        }
-                        )}
+                            let resource = ImageResource(downloadURL: url, cacheKey: imageName)
+                            let processor = RoundCornerImageProcessor(cornerRadius: 40)
+                            self.postImageView.kf.indicatorType = .activity
+                            self.postImageView.kf.setImage(with: resource, options: [.processor(processor)])
+                        })
                     })
                 }
             }

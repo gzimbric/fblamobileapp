@@ -97,9 +97,14 @@ class UserPostsViewController: UIViewController, UITableViewDelegate, UITableVie
                 guard let url = url else {
                     return
                 }
-                let resource = ImageResource(downloadURL: url, cacheKey: imageName)
-                cell.postImageView.kf.indicatorType = .activity
-                cell.postImageView.kf.setImage(with: resource)
+                cell.postImageView.alpha = 0
+                UIView.animate(withDuration: 0.4, animations: {
+                    cell.postImageView.alpha = 1
+                    let resource = ImageResource(downloadURL: url, cacheKey: imageName)
+                    let processor = RoundCornerImageProcessor(cornerRadius: 40)
+                    cell.postImageView.kf.indicatorType = .activity
+                    cell.postImageView.kf.setImage(with: resource, options: [.processor(processor)])
+                })
             })
         }
         return cell
