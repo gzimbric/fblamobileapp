@@ -18,16 +18,14 @@ class PostTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    // Resets image on scroll
     override func prepareForReuse() {
         super.prepareForReuse()
         self.postImageView.image = nil
-        // Set cell to initial state here, reset or set values
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: false)
-
-        // Configure the view for the selected state
     }
 
 }

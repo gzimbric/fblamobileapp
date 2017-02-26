@@ -22,8 +22,7 @@ class PostDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        // Loads post information from database to View Controller
         FIRDatabase.database().reference().child("posts").child(postDetails!).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 self.title = dictionary["title"] as? String
@@ -36,6 +35,7 @@ class PostDetailsViewController: UIViewController {
                         guard let url = url else {
                             return
                         }
+                        // Display post with animation
                         self.postImageView.alpha = 0
                         UIView.animate(withDuration: 0.4, animations: {
                             self.postImageView.alpha = 1
@@ -54,16 +54,4 @@ class PostDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

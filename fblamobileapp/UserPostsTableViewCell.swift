@@ -18,11 +18,15 @@ class UserPostsTableViewCell: UITableViewCell {
         // Initialization code
         postImageView.image = nil
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // Resets image on scroll
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.postImageView.image = nil
     }
-
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: false)
+    }
+    
 }

@@ -20,14 +20,24 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Set delegate in viewDidLoad
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
         
+        // Variable cell size
         self.postsTableView.estimatedRowHeight = 457
         self.postsTableView.rowHeight = UITableViewAutomaticDimension
+
+        // UIImage in Navigation
+        let logo = UIImage(named: "logo.png")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = logo
+        self.navigationItem.titleView = imageView
         
         loadData()
         
+        // Add refreshControl to ViewController
         let refreshControl = UIRefreshControl()
             refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
             self.postsTableView.insertSubview(refreshControl, at: 0)
@@ -72,16 +82,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     // MARK: - Table view data source
-
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
+    // Preforms showDetails segue when cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             performSegue(withIdentifier: "showDetails", sender: self)
     }
 
+    // Determines # of cells based on number of posts in database
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.posts.count
     }
@@ -112,7 +122,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
-    
+    // Send postID over segue to PostDetailsViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             if let indexPath = self.postsTableView.indexPathForSelectedRow {

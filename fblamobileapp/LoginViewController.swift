@@ -19,14 +19,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
         // Returns user to Home ViewController if already logged in
         if FIRAuth.auth()?.currentUser != nil {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
             self.present(vc!, animated: false, completion: nil)
         }
-            self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard)))
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Tap to dismiss Keyboard Gesture Recognizer
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard)))
+        
+        // Hide Navigation Controller
+        self.navigationController?.isNavigationBarHidden = true
 
+        // ViewController Styling
         self.emailTextField.alpha = 0.70
         self.passwordTextField.alpha = 0.70
         self.loginButton.layer.cornerRadius = 5
@@ -38,6 +46,7 @@ class LoginViewController: UIViewController {
         
     }
     
+    // Tap to Dismiss Keyboard
     func dismissKeyboard() {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
@@ -48,8 +57,8 @@ class LoginViewController: UIViewController {
         
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
             
-            //Tells user that either there is nothing in the email text field
-            let alertController = UIAlertController(title: "Error", message: "Make sure to enter an email and password", preferredStyle: .alert)
+            // Displays error if there is nothing in password/email field
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)

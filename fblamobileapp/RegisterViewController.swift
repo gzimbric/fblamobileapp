@@ -15,27 +15,22 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var returnButton: UIButton!
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-        if FIRAuth.auth()?.currentUser != nil {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-            self.present(vc!, animated: false, completion: nil)
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Tap to dismiss Keyboard Gesture Recognizer
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard)))
         
+        // ViewController Styling
         self.emailTextField.alpha = 0.70
         self.passwordTextField.alpha = 0.70
         self.usernameTextField.alpha = 0.70
         self.registerButton.layer.cornerRadius = 5
         self.registerButton.alpha = 0.70
-        self.returnButton.alpha = 0.70
-        self.returnButton.layer.cornerRadius = 5
     }
     
+    // Tap to Dismiss Keyboard
     func dismissKeyboard() {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
@@ -49,9 +44,9 @@ class RegisterViewController: UIViewController {
         let password = passwordTextField.text
         let email = emailTextField.text
         
-        //Tells user that either there is nothing in the email text field
-        if emailTextField.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Make sure to enter an email and password", preferredStyle: .alert)
+        // Shows error if any field is empty
+        if emailTextField.text == "" || self.usernameTextField.text == "" || self.passwordTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter info into all fields", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -63,22 +58,22 @@ class RegisterViewController: UIViewController {
                 
                 if error == nil {
                     
-                    //Console message for successful registration
+                    // Console message for successful registration
                     print("Sign up successful.")
                     
-                    // Store username
+                    // Create user in database
                     if let uid = FIRAuth.auth()?.currentUser?.uid {
                         let userRef = FIRDatabase.database().reference().child("users").child(uid)
                         let object = ["username": username]
                         userRef.setValue(object)
                         
-                        //Go to the success screen if registration works
+                        // Show feed if registration is successful
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                         self.present(vc!, animated: true, completion: nil)
                     }
                     
                 }
-                // Shows error if there is one from Firebase
+                // If error occurs, show UIAlertController from Firebase
                 else {
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     

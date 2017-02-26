@@ -18,12 +18,17 @@ class UserPostsViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Set delegate in viewDidLoad
         self.userPostsTableView.delegate = self
         self.userPostsTableView.dataSource = self
         
+        // Variable cell size
+        self.userPostsTableView.estimatedRowHeight = 457
+        self.userPostsTableView.rowHeight = UITableViewAutomaticDimension
+        
         loadData()
         
+        // Add refreshControl to ViewController
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
         self.userPostsTableView.insertSubview(refreshControl, at: 0)
@@ -70,16 +75,11 @@ class UserPostsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: - Table view data source
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // pass any object as parameter, i.e. the tapped row
-    }
-    
+    // Determines # of cells based on number of posts in database
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.userPosts.count
@@ -109,15 +109,4 @@ class UserPostsViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

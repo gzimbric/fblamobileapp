@@ -19,9 +19,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var selectImageButton: UIButton!
     
     var imageFileName = ""
-    
     let imagePicker = UIImagePickerController()
-    
     let postID = UUID().uuidString
     
     override func viewDidLoad() {
@@ -30,6 +28,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.descriptionTextView.layer.cornerRadius = 5
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PostViewController.dismissKeyboard)))
         
+        // ViewController styling
         self.titleTextField.borderStyle = UITextBorderStyle.roundedRect
         self.priceTextField.borderStyle = UITextBorderStyle.roundedRect
         self.ratingTextField.borderStyle = UITextBorderStyle.roundedRect
@@ -54,15 +53,50 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Dispose of any resources that can be recreated.
     }
     
-    // Runs imagePicker when button is tapped
+    // Displays UIAlertController (User selection of camera/gallery)
     @IBAction func selectImageTapped(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // Opens Camera from UIAlertController
+    func openCamera()
+    {
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
+        {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
+        // Lets user knew their device has no camera
+        else
+        {
+            let alert  = UIAlertController(title: "Error", message: "Your device doen't have a camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    // Opens Gallery from UIAlertController
+    func openGallary()
+    {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     // Generating Random String for photo ID
@@ -148,7 +182,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     }
                 }
             })
-            
+            // Submits data to UID database
             FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 if let userDictionary = snapshot.value as? [String: AnyObject] {
                     for user in userDictionary {
@@ -189,21 +223,11 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             })
         }
     }
-           // Displays message if iamge has not finished uploading to server
+           // Displays message if image has not finished uploading to server
         else {
             let alert = UIAlertController(title: "Please Wait", message: "The image has not finished processing yet", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
     }
 }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
