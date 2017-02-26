@@ -16,6 +16,7 @@
 		924376681E4D3E5F0004DEB4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924376671E4D3E5F0004DEB4 /* PostViewController.swift */; };
 		924E0EDC1E62D2530057645B /* fblamobileappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E0EDB1E62D2530057645B /* fblamobileappUITests.swift */; };
 		924E0EEA1E62D25A0057645B /* fblamobileappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E0EE91E62D25A0057645B /* fblamobileappTests.swift */; };
+		924E0EF21E62D4580057645B /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924E0EF11E62D4580057645B /* Kingfisher.framework */; };
 		9293123D1E5D141E006D22A4 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293123C1E5D141E006D22A4 /* PostDetailsViewController.swift */; };
 		92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */; };
 		92CFAF571E4E8E2500BE00DB /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */; };
@@ -67,6 +68,7 @@
 		924E0EE71E62D25A0057645B /* fblamobileappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fblamobileappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924E0EE91E62D25A0057645B /* fblamobileappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fblamobileappTests.swift; sourceTree = "<group>"; };
 		924E0EEB1E62D25A0057645B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		924E0EF11E62D4580057645B /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "../../../Library/Developer/Xcode/DerivedData/fblamobileapp-arvjyimnfuychghdhdxgngizjfvm/Build/Products/Debug-iphoneos/Kingfisher/Kingfisher.framework"; sourceTree = "<group>"; };
 		9293123C1E5D141E006D22A4 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924E0EF21E62D4580057645B /* Kingfisher.framework in Frameworks */,
 				31C17894119B5D264E8DD439 /* Pods_fblamobileapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +191,7 @@
 		D742ABC7F9C6C6F9553E1CB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				924E0EF11E62D4580057645B /* Kingfisher.framework */,
 				88E47D0B8E38DF5646FF94B1 /* Pods_fblamobileapp.framework */,
 				0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */,
 				743078D869DDC8ABD809349E /* Pods_fblamobileappUITests.framework */,
@@ -755,6 +759,7 @@
 				924E0EE21E62D2530057645B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		924E0EEE1E62D25A0057645B /* Build configuration list for PBXNativeTarget "fblamobileappTests" */ = {
 			isa = XCConfigurationList;
@@ -763,6 +768,7 @@
 				924E0EF01E62D25A0057645B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92E822F21E4C22F200DDFFB9 /* Build configuration list for PBXProject "fblamobileapp" */ = {
 			isa = XCConfigurationList;
