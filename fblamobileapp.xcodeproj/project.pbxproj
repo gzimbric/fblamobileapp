@@ -25,23 +25,6 @@
 		92E866C51E4FE4F000F06210 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E866C41E4FE4F000F06210 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		92E8230C1E4C22F200DDFFB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 92E822EF1E4C22F200DDFFB9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92E822F61E4C22F200DDFFB9;
-			remoteInfo = fblamobileapp;
-		};
-		92E823171E4C22F200DDFFB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 92E822EF1E4C22F200DDFFB9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 92E822F61E4C22F200DDFFB9;
-			remoteInfo = fblamobileapp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0895744D1EE6CECB73CFDFAD /* Pods_fblamobileappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fblamobileappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		222C24BCC423785D9A1C39CD /* Pods-fblamobileapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fblamobileapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fblamobileapp/Pods-fblamobileapp.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +46,6 @@
 		92E823011E4C22F200DDFFB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92E823041E4C22F200DDFFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92E823061E4C22F200DDFFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92E8230B1E4C22F200DDFFB9 /* fblamobileappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fblamobileappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92E823161E4C22F200DDFFB9 /* fblamobileappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fblamobileappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E823281E4C265500DDFFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92E866C41E4FE4F000F06210 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,20 +56,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C17894119B5D264E8DD439 /* Pods_fblamobileapp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E823081E4C22F200DDFFB9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E823131E4C22F200DDFFB9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */,
-				92E8230B1E4C22F200DDFFB9 /* fblamobileappTests.xctest */,
-				92E823161E4C22F200DDFFB9 /* fblamobileappUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,42 +145,6 @@
 			productReference = 92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		92E8230A1E4C22F200DDFFB9 /* fblamobileappTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 92E823221E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappTests" */;
-			buildPhases = (
-				92E823071E4C22F200DDFFB9 /* Sources */,
-				92E823081E4C22F200DDFFB9 /* Frameworks */,
-				92E823091E4C22F200DDFFB9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				92E8230D1E4C22F200DDFFB9 /* PBXTargetDependency */,
-			);
-			name = fblamobileappTests;
-			productName = fblamobileappTests;
-			productReference = 92E8230B1E4C22F200DDFFB9 /* fblamobileappTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		92E823151E4C22F200DDFFB9 /* fblamobileappUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 92E823251E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappUITests" */;
-			buildPhases = (
-				92E823121E4C22F200DDFFB9 /* Sources */,
-				92E823131E4C22F200DDFFB9 /* Frameworks */,
-				92E823141E4C22F200DDFFB9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				92E823181E4C22F200DDFFB9 /* PBXTargetDependency */,
-			);
-			name = fblamobileappUITests;
-			productName = fblamobileappUITests;
-			productReference = 92E823161E4C22F200DDFFB9 /* fblamobileappUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,18 +159,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = H65Y924PHT;
 						ProvisioningStyle = Automatic;
-					};
-					92E8230A1E4C22F200DDFFB9 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = H65Y924PHT;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 92E822F61E4C22F200DDFFB9;
-					};
-					92E823151E4C22F200DDFFB9 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = H65Y924PHT;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 92E822F61E4C22F200DDFFB9;
 					};
 				};
 			};
@@ -259,8 +176,6 @@
 			projectRoot = "";
 			targets = (
 				92E822F61E4C22F200DDFFB9 /* fblamobileapp */,
-				92E8230A1E4C22F200DDFFB9 /* fblamobileappTests */,
-				92E823151E4C22F200DDFFB9 /* fblamobileappUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,20 +189,6 @@
 				92E823291E4C265500DDFFB9 /* GoogleService-Info.plist in Resources */,
 				92E823021E4C22F200DDFFB9 /* Assets.xcassets in Resources */,
 				92E823001E4C22F200DDFFB9 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E823091E4C22F200DDFFB9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E823141E4C22F200DDFFB9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,34 +261,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92E823071E4C22F200DDFFB9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92E823121E4C22F200DDFFB9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		92E8230D1E4C22F200DDFFB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92E822F61E4C22F200DDFFB9 /* fblamobileapp */;
-			targetProxy = 92E8230C1E4C22F200DDFFB9 /* PBXContainerItemProxy */;
-		};
-		92E823181E4C22F200DDFFB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 92E822F61E4C22F200DDFFB9 /* fblamobileapp */;
-			targetProxy = 92E823171E4C22F200DDFFB9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		92E822FE1E4C22F200DDFFB9 /* Main.storyboard */ = {
@@ -409,7 +283,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		92E8231D1E4C22F200DDFFB9 /* Debug */ = {
+		924E0ED11E62D0B60057645B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,17 +306,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -450,12 +318,27 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		924E0ED21E62D0B60057645B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3022EBD6866806CC53B25EEA /* Pods-fblamobileapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H65Y924PHT;
+				INFOPLIST_FILE = fblamobileapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fundup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -502,22 +385,6 @@
 			};
 			name = Release;
 		};
-		92E823201E4C22F200DDFFB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3022EBD6866806CC53B25EEA /* Pods-fblamobileapp.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H65Y924PHT;
-				INFOPLIST_FILE = fblamobileapp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fundup;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
 		92E823211E4C22F200DDFFB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 222C24BCC423785D9A1C39CD /* Pods-fblamobileapp.release.xcconfig */;
@@ -534,72 +401,14 @@
 			};
 			name = Release;
 		};
-		92E823231E4C22F200DDFFB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = H65Y924PHT;
-				INFOPLIST_FILE = fblamobileappTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fblamobileapp.app/fblamobileapp";
-			};
-			name = Debug;
-		};
-		92E823241E4C22F200DDFFB9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = H65Y924PHT;
-				INFOPLIST_FILE = fblamobileappTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fblamobileapp.app/fblamobileapp";
-			};
-			name = Release;
-		};
-		92E823261E4C22F200DDFFB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = H65Y924PHT;
-				INFOPLIST_FILE = fblamobileappUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = fblamobileapp;
-			};
-			name = Debug;
-		};
-		92E823271E4C22F200DDFFB9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = H65Y924PHT;
-				INFOPLIST_FILE = fblamobileappUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lampserv.fblamobileappUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = fblamobileapp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		92E822F21E4C22F200DDFFB9 /* Build configuration list for PBXProject "fblamobileapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92E8231D1E4C22F200DDFFB9 /* Debug */,
 				92E8231E1E4C22F200DDFFB9 /* Release */,
+				924E0ED11E62D0B60057645B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -607,26 +416,8 @@
 		92E8231F1E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92E823201E4C22F200DDFFB9 /* Debug */,
 				92E823211E4C22F200DDFFB9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		92E823221E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				92E823231E4C22F200DDFFB9 /* Debug */,
-				92E823241E4C22F200DDFFB9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		92E823251E4C22F200DDFFB9 /* Build configuration list for PBXNativeTarget "fblamobileappUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				92E823261E4C22F200DDFFB9 /* Debug */,
-				92E823271E4C22F200DDFFB9 /* Release */,
+				924E0ED21E62D0B60057645B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
