@@ -13,4 +13,14 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Kingfisher', '~> 3.0'
 
+target 'fblamobileappTests' do
+    inherit! :search_paths
+    # Pods for testing
+end
+
+target 'fblamobileappUITests' do
+    inherit! :search_paths
+    # Pods for testing
+end
+
 end
