@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92E8230A1E4C22F200DDFFB9"
+               BlueprintIdentifier = "924E0EE61E62D25A0057645B"
                BuildableName = "fblamobileappTests.xctest"
                BlueprintName = "fblamobileappTests"
                ReferencedContainer = "container:fblamobileapp.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92E823151E4C22F200DDFFB9"
+               BlueprintIdentifier = "924E0ED81E62D2530057645B"
                BuildableName = "fblamobileappUITests.xctest"
                BlueprintName = "fblamobileappUITests"
                ReferencedContainer = "container:fblamobileapp.xcodeproj">
