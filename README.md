@@ -24,10 +24,9 @@ Already Implemented:
  - Full Slide-To-Refresh support
  - Details page for each post displaying extra info
  - Image caching
+ - Take Photo/Library Option when posting
+ - Commenting support for each post
 
 TO-DO List:
 
- - Implement private messaging/commenting
- - Possibly add 'Take Photo' option when adding image to post
  - Possibly add edit function for owner of post
- - Fix alpha refesh in login/register account/reset account

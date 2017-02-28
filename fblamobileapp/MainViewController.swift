@@ -16,7 +16,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var posts = NSMutableArray()
     var postDetails = ""
-    var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Variable cell size
         self.postsTableView.estimatedRowHeight = 457
         self.postsTableView.rowHeight = UITableViewAutomaticDimension
-
+        
         // UIImage in Navigation
         let logo = UIImage(named: "logo.png")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
@@ -128,7 +127,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let indexPath = self.postsTableView.indexPathForSelectedRow {
                 let post = posts[indexPath.row] as! [String: AnyObject]
                 let postDetails = post["postID"] as? String
-                let controller = segue.destination as! PostDetailsViewController
+                let controller = segue.destination as! PostDetailsTableViewController
                 controller.postDetails = postDetails
             }
         }
