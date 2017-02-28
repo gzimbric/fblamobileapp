@@ -502,22 +502,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Comments..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-vK-JQ8">
-                                            <rect key="frame" x="8" y="8" width="304" height="43"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Comment..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-vK-JQ8">
+                                            <rect key="frame" x="8" y="31.5" width="304" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS6-6f-rOG">
+                                            <rect key="frame" x="8" y="8" width="304" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="trailing" secondItem="btT-LO-1Ky" secondAttribute="trailingMargin" id="3sQ-4C-8F5"/>
-                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="bottom" secondItem="btT-LO-1Ky" secondAttribute="bottomMargin" id="VPa-As-Ox9"/>
-                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="leading" secondItem="btT-LO-1Ky" secondAttribute="leadingMargin" id="iai-pQ-OzY"/>
-                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="top" secondItem="btT-LO-1Ky" secondAttribute="topMargin" id="rxR-Da-6dg"/>
+                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="top" secondItem="GS6-6f-rOG" secondAttribute="bottom" constant="2" id="0kT-GD-czf"/>
+                                        <constraint firstItem="GS6-6f-rOG" firstAttribute="leading" secondItem="btT-LO-1Ky" secondAttribute="leadingMargin" id="GYo-AD-n7U"/>
+                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="bottom" secondItem="btT-LO-1Ky" secondAttribute="bottomMargin" id="KNL-2s-tgx"/>
+                                        <constraint firstItem="GS6-6f-rOG" firstAttribute="trailing" secondItem="btT-LO-1Ky" secondAttribute="trailingMargin" id="Ps1-tJ-u0C"/>
+                                        <constraint firstItem="GS6-6f-rOG" firstAttribute="top" secondItem="btT-LO-1Ky" secondAttribute="topMargin" id="dws-Rr-r8h"/>
+                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="leading" secondItem="btT-LO-1Ky" secondAttribute="leadingMargin" id="fxq-Lb-uOg"/>
+                                        <constraint firstItem="JOF-vK-JQ8" firstAttribute="trailing" secondItem="btT-LO-1Ky" secondAttribute="trailingMargin" id="l00-3u-fC2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentLabel" destination="JOF-vK-JQ8" id="Tcc-xy-3cO"/>
+                                    <outlet property="usernameLabel" destination="GS6-6f-rOG" id="buw-w4-7q0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -529,7 +539,7 @@
                     <navigationItem key="navigationItem" id="3BF-Th-g4g">
                         <barButtonItem key="rightBarButtonItem" title="Comment" id="EpT-Bk-r4a">
                             <connections>
-                                <segue destination="qZg-0I-fX7" kind="show" id="JCW-mK-Jr4"/>
+                                <segue destination="qZg-0I-fX7" kind="show" identifier="addComment" id="JCW-mK-Jr4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

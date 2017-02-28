@@ -16,6 +16,7 @@ class CommentViewController: UIViewController {
     
     var commentDetails: String?
     let commentID = UUID().uuidString
+    let timestamp = FIRServerValue.timestamp()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,7 @@ class CommentViewController: UIViewController {
                                     let postObject: Dictionary<String, Any> = [
                                                     "comment": comment,
                                                     "username" : username,
+                                                    "timestamp" : self.timestamp,
                                                     "commentID": self.commentID,
                                                 ]
                                                 

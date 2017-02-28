@@ -87,7 +87,7 @@ class PostDetailsTableViewController: UITableViewController {
     }
     
     func loadData() {
-        FIRDatabase.database().reference().child("posts").child(postDetails!).child("comments").observeSingleEvent(of: .value, with: {
+        FIRDatabase.database().reference().child("posts").child(postDetails!).child("comments").queryOrdered(byChild: "timestamp").observeSingleEvent(of: .value, with: {
             (snapshot) in
             if let postsDictionary = snapshot.value as? [String: AnyObject] {
                 for post in postsDictionary {
@@ -98,13 +98,14 @@ class PostDetailsTableViewController: UITableViewController {
         })
     }
     
-    // Displays posts in postsTableView
+    // Displays posts in postsDetailsTableView
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as! CommentTableViewCell
         // Configure the cell...
         let post = self.posts[indexPath.row] as! [String: AnyObject]
         cell.selectionStyle = .none
         cell.commentLabel.text = post["comment"] as? String
+        cell.usernameLabel.text = post["username"] as? String
         return cell
     }
 }
