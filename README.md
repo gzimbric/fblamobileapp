@@ -57,17 +57,17 @@ Troubleshooting
 -------------
 
  - App isn't loading any posts or is throwing errors about the 'connection'
- A: Your device isn't connected to the Internet or your connection is weak. Try switching networks, move closer to the Internet source, or connect to the Internet.
+ **A:** Your device isn't connected to the Internet or your connection is weak. Try switching networks, move closer to the Internet source, or connect to the Internet.
  
-  - Why can't I use the camera?
-  A: If you receive an error while trying to launch the camera then either your device doesn't have a camera or your camera isn't working. If your camera has stopped functioning, please call Apple to repair your device.
+ - Why can't I use the camera?
+ **A:** If you receive an error while trying to launch the camera then either your device doesn't have a camera or your camera isn't working. If your camera has stopped functioning, please call Apple to repair your device.
   
-  - Why can't I delete my post/comment?
-  A: The deletion of posts/comments is done automatically by a moderator of FundUP after a listing has been completed. If you'd like to have a comment/post removed before the listing is completed, please contact gabe@zimbri.cc so it can be done as soon as possible.
+ - Why can't I delete my post/comment?
+ **A:** The deletion of posts/comments is done automatically by a moderator of FundUP after a listing has been completed. If you'd like to have a comment/post removed before the listing is completed, please contact gabe@zimbri.cc so it can be done as soon as possible.
   
 Copyright
 -------------
-FundUP was built with XCode, CocoaPods, Firebase, and KingFisher. All code included in FundUP was specifically made for the app itself.
+FundUP was built with XCode, CocoaPods, Firebase, and KingFisher.
 
  - XCode: Copyright © 2017 Apple Inc. All rights reserved.
  - CocoaPods: Copyright © 2017 CocoaPods. CocoaPods is icensed under the MIT license.
