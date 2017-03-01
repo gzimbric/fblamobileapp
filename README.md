@@ -38,11 +38,18 @@ Requirements
 Installation
 -------------
  **In order to install this application a Mac running Xcode will be needed.**
-	 1. Open the archive and click on `fblamobileapp.xcworkspace`
-	 2.  Once the project is loaded, select a device from the drop-down near the top-left corner (This can be a simulator or a real device)
-	 3. Once a device is selected, press the icon that is very similar to a play button to run the project.
-	 4. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept FundUP
-	  **Note:** If running on a device, make sure it is unlocked before it is plugged in.
+ 1. Open the archive and click on `fblamobileapp.xcworkspace`
+ 2.  Once the project is loaded, select a device from the drop-down near the top-left corner (This can be a simulator or a real device)
+ 3. Once a device is selected, press the icon that is very similar to a play button to run the project.
+ 4. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept FundUP
+**Note:** If running on a device, make sure it is unlocked before it is plugged in.
+
+Signing Fix
+-------------
+After downloading the .zip file you will most likely need to change the signing settings of the app.
+1. Click 'fblamobileapp' at the top of the left sidebar with the blue project icon to the left of it.
+2. If done correctly, a new window will open. From the left sidebar of that window, look for 'fblamobileapp' under 'Targets' and click it.
+3. Under 'General' look for 'Signing' and fix any signing issues by selecting/creating your own team. You may have to enter your Apple ID during this step.
 
 Software Used
 -------------
