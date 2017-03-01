@@ -47,9 +47,9 @@ Installation
 Signing Fix
 -------------
 After downloading the .zip file you will most likely need to change the signing settings of the app.
-1. Click 'fblamobileapp' at the top of the left sidebar with the blue project icon to the left of it.
-2. If done correctly, a new window will open. From the left sidebar of that window, look for 'fblamobileapp' under 'Targets' and click it.
-3. Under 'General' look for 'Signing' and fix any signing issues by selecting/creating your own team. You may have to enter your Apple ID during this step.
+ 1. Click 'fblamobileapp' at the top of the left sidebar with the blue project icon to the left of it.
+ 2. If done correctly, a new window will open. From the left sidebar of that window, look for 'fblamobileapp' under 'Targets' and click it.
+ 3. Under 'General' look for 'Signing' and fix any signing issues by selecting/creating your own team. You may have to enter your Apple ID during this step.
 
 Software Used
 -------------
