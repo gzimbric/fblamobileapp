@@ -7,6 +7,12 @@ Introduction
 -------------
 FundUP is a mobile crowdfunding app made to help users fund their trip to Nationals by selling used/old items. The app includes full posting and commenting support so users can interact with others within the app itself natively.
 
+Useful Links
+-------------
+
+  - [Screenshots](https://github.com/gzimbric/fblamobileapp/blob/master/fundup_photos.pdf)
+ - [YouTube Video](https://youtu.be/aQCZedCYEmg)
+
 Features
 -------------
 
