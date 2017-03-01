@@ -10,7 +10,7 @@ FundUP is a mobile crowdfunding app made to help users fund their trip to Nation
 Useful Links
 -------------
 
-  - [Screenshots](https://github.com/gzimbric/fblamobileapp/blob/master/fundup_photos.pdf)
+ - [Screenshots](https://github.com/gzimbric/fblamobileapp/blob/master/fundup_photos.pdf)
  - [YouTube Video](https://youtu.be/aQCZedCYEmg)
 
 Features
