@@ -24,9 +24,11 @@ class PostDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set delegate in viewDidLoad
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        // Variable cell size
         self.tableView.estimatedRowHeight = 90
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -81,11 +83,13 @@ class PostDetailsTableViewController: UITableViewController {
         return 1
     }
 
+    // Determines # of cells based on number of posts in database
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.posts.count
     }
     
+    // Loads data from Firebase to tableView
     func loadData() {
         FIRDatabase.database().reference().child("posts").child(postDetails!).child("comments").queryOrdered(byChild: "timestamp").observeSingleEvent(of: .value, with: {
             (snapshot) in

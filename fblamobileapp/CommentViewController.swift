@@ -20,6 +20,7 @@ class CommentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Displays username of logged in user
         let uid = FIRAuth.auth()?.currentUser?.uid
         FIRDatabase.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
@@ -27,6 +28,7 @@ class CommentViewController: UIViewController {
             }
         })
         
+        // ViewController styling
         self.commentTextView.layer.cornerRadius = 5
         self.commentTextView.alpha = 0.70
 
@@ -37,6 +39,7 @@ class CommentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Sends comment data to Firebase
     @IBAction func commentComplete(_ sender: Any) {
             if let uid = FIRAuth.auth()?.currentUser?.uid {
                 // Submits comment to Firebase Database
@@ -71,6 +74,7 @@ class CommentViewController: UIViewController {
     }
 }
 
+// Timestamp
 extension Date {
     static let iso8601Formatter: DateFormatter = {
         let formatter = DateFormatter()
