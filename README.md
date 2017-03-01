@@ -56,13 +56,13 @@ When I first approched doing this FBLA event, I knew that Swift would be a great
 Troubleshooting
 -------------
 
- - App isn't loading any posts or is throwing errors about the 'connection'
+ - *App isn't loading any posts or is throwing errors about the 'connection'*<br>
  **A:** Your device isn't connected to the Internet or your connection is weak. Try switching networks, move closer to the Internet source, or connect to the Internet.
  
- - Why can't I use the camera?
+ - *Why can't I use the camera?*<br>
  **A:** If you receive an error while trying to launch the camera then either your device doesn't have a camera or your camera isn't working. If your camera has stopped functioning, please call Apple to repair your device.
   
- - Why can't I delete my post/comment?
+ - *Why can't I delete my post/comment?*<br>
  **A:** The deletion of posts/comments is done automatically by a moderator of FundUP after a listing has been completed. If you'd like to have a comment/post removed before the listing is completed, please contact gabe@zimbri.cc so it can be done as soon as possible.
   
 Copyright
