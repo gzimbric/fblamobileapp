@@ -1,7 +1,7 @@
 FundUP
 ===================
 
-Mobile app for FBLA Mobile App Design, will be displayed for judges at the Wisconsin SLC Event.
+Mobile app for FBLA Mobile App Design, will be displayed for judges at the FBLA National Leadership Conference
 
 Introduction
 -------------
@@ -83,6 +83,6 @@ Copyright
 FundUP was built with XCode, CocoaPods, Firebase, and KingFisher.
 
  - XCode: Copyright © 2017 Apple Inc. All rights reserved.
- - CocoaPods: Copyright © 2017 CocoaPods. CocoaPods is icensed under the MIT license.
+ - CocoaPods: Copyright © 2017 CocoaPods. CocoaPods is licensed under the MIT license.
  - Firebase: Copyright © 2017 Alphabet Inc. All rights reserved.
- - KingFisher: Copyright © 2017 Wei Wang (@onevcat). KingFisher is icensed under the MIT license.
+ - KingFisher: Copyright © 2017 Wei Wang (@onevcat). KingFisher is licensed under the MIT license.
