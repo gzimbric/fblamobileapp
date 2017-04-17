@@ -19,6 +19,8 @@
 		924E0EF41E6398140057645B /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E0EF31E6398140057645B /* CommentViewController.swift */; };
 		924E0EF61E6541E90057645B /* PostDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E0EF51E6541E90057645B /* PostDetailsTableViewController.swift */; };
 		924E0EF81E6544B90057645B /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E0EF71E6544B90057645B /* CommentTableViewCell.swift */; };
+		9261DD801EA45E5000D0B374 /* UserPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9261DD7F1EA45E5000D0B374 /* UserPostsTableViewController.swift */; };
+		9267A0411E95D21A00E153A6 /* SupportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267A0401E95D21A00E153A6 /* SupportTableViewController.swift */; };
 		92CFAF4F1E4D5D4100BE00DB /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */; };
 		92CFAF571E4E8E2500BE00DB /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */; };
 		92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */; };
@@ -73,6 +75,8 @@
 		924E0EF31E6398140057645B /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		924E0EF51E6541E90057645B /* PostDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsTableViewController.swift; sourceTree = "<group>"; };
 		924E0EF71E6544B90057645B /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		9261DD7F1EA45E5000D0B374 /* UserPostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPostsTableViewController.swift; sourceTree = "<group>"; };
+		9267A0401E95D21A00E153A6 /* SupportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportTableViewController.swift; sourceTree = "<group>"; };
 		92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		92E822F71E4C22F200DDFFB9 /* fblamobileapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fblamobileapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,7 @@
 			children = (
 				92E822FA1E4C22F200DDFFB9 /* AppDelegate.swift */,
 				92E866C41E4FE4F000F06210 /* MainViewController.swift */,
+				9267A0401E95D21A00E153A6 /* SupportTableViewController.swift */,
 				92CFAF4E1E4D5D4100BE00DB /* PostTableViewCell.swift */,
 				924E0EF51E6541E90057645B /* PostDetailsTableViewController.swift */,
 				924E0EF71E6544B90057645B /* CommentTableViewCell.swift */,
@@ -169,6 +174,7 @@
 				924376671E4D3E5F0004DEB4 /* PostViewController.swift */,
 				92CFAF561E4E8E2500BE00DB /* ProfileTableViewController.swift */,
 				921B25EB1E54067900303859 /* UserPostsViewController.swift */,
+				9261DD7F1EA45E5000D0B374 /* UserPostsTableViewController.swift */,
 				921B25E71E5404C400303859 /* UserPostsTableViewCell.swift */,
 				92E822FE1E4C22F200DDFFB9 /* Main.storyboard */,
 				92E823011E4C22F200DDFFB9 /* Assets.xcassets */,
@@ -512,10 +518,12 @@
 				9221D1C91E4C27E4003FADBE /* RegisterViewController.swift in Sources */,
 				924376661E4C36760004DEB4 /* PasswordResetViewController.swift in Sources */,
 				92E866C51E4FE4F000F06210 /* MainViewController.swift in Sources */,
+				9267A0411E95D21A00E153A6 /* SupportTableViewController.swift in Sources */,
 				924E0EF81E6544B90057645B /* CommentTableViewCell.swift in Sources */,
 				924E0EF41E6398140057645B /* CommentViewController.swift in Sources */,
 				92E822FB1E4C22F200DDFFB9 /* AppDelegate.swift in Sources */,
 				921B25EC1E54067900303859 /* UserPostsViewController.swift in Sources */,
+				9261DD801EA45E5000D0B374 /* UserPostsTableViewController.swift in Sources */,
 				9221D1CD1E4C3386003FADBE /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +589,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -591,6 +600,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -602,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3022EBD6866806CC53B25EEA /* Pods-fblamobileapp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H65Y924PHT;
 				INFOPLIST_FILE = fblamobileapp/Info.plist;
@@ -733,7 +744,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -743,6 +754,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 222C24BCC423785D9A1C39CD /* Pods-fblamobileapp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H65Y924PHT;
 				INFOPLIST_FILE = fblamobileapp/Info.plist;

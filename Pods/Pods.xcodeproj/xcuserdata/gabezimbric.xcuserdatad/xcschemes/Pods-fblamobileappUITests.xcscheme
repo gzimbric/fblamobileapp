@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4944FEC314D1A66588651D006273ADE"
-               BuildableName = "Kingfisher.framework"
-               BlueprintName = "Kingfisher"
+               BlueprintIdentifier = "18190A6929D22E6D95477F31C2334EEE"
+               BuildableName = "Pods_fblamobileappUITests.framework"
+               BlueprintName = "Pods-fblamobileappUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4944FEC314D1A66588651D006273ADE"
-            BuildableName = "Kingfisher.framework"
-            BlueprintName = "Kingfisher"
+            BlueprintIdentifier = "18190A6929D22E6D95477F31C2334EEE"
+            BuildableName = "Pods_fblamobileappUITests.framework"
+            BlueprintName = "Pods-fblamobileappUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

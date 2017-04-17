@@ -4,32 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GTMSessionFetcher.xcscheme_^#shared#^_</key>
+		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>GoogleToolboxForMac.xcscheme_^#shared#^_</key>
+		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kingfisher.xcscheme_^#shared#^_</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-fblamobileapp.xcscheme_^#shared#^_</key>
+		<key>Pods-fblamobileapp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-fblamobileappTests.xcscheme_^#shared#^_</key>
+		<key>Pods-fblamobileappTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-fblamobileappUITests.xcscheme_^#shared#^_</key>
+		<key>Pods-fblamobileappUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

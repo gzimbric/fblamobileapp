@@ -14,16 +14,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var resetAccountButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
         // Returns user to Home ViewController if already logged in
         if FIRAuth.auth()?.currentUser != nil {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
             self.present(vc!, animated: false, completion: nil)
         }
+        // Hide the navigation bar on this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
@@ -31,18 +32,15 @@ class LoginViewController: UIViewController {
         // Tap to dismiss Keyboard Gesture Recognizer
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard)))
         
-        // Hide Navigation Controller
-        self.navigationController?.isNavigationBarHidden = true
-
         // ViewController Styling
         self.emailTextField.alpha = 0.70
         self.passwordTextField.alpha = 0.70
         self.loginButton.layer.cornerRadius = 5
         self.loginButton.alpha = 0.70
-        self.resetAccountButton.layer.cornerRadius = 5
-        self.resetAccountButton.alpha = 0.70
         self.createAccountButton.layer.cornerRadius = 5
         self.createAccountButton.alpha = 0.70
+        
+        self.navigationController?.isNavigationBarHidden = true
         
     }
     
