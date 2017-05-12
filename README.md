@@ -37,11 +37,12 @@ Requirements
 
 Installation
 -------------
- **In order to install this application a Mac running Xcode will be needed.**
- 1. Open the archive and click on `fblamobileapp.xcworkspace`
- 2.  Once the project is loaded, select a device from the drop-down near the top-left corner (This can be a simulator or a real device)
- 3. Once a device is selected, press the icon that is very similar to a play button to run the project.
- 4. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept FundUP<br>
+ **In order to install this application a Mac running Xcode with CocoaPods will be needed.**
+ 1. Make sure CocoaPods is installed on the development computer. Install Guide can be found here: https://guides.cocoapods.org/using/getting-started.html
+ 2. Open the archive and click on `fblamobileapp.xcworkspace`
+ 3.  Once the project is loaded, select a device from the drop-down near the top-left corner (This can be a simulator or a real device)
+ 4. Once a device is selected, press the icon that is very similar to a play button to run the project.
+ 5. If running on an actual device, make sure to accept any prompts so the app builds correctly. You also may need to go to Settings -> General -> Profile & Device Management -> Look under 'Developer Apps' -> Accept FundUP<br>
 **Note:** If running on a device, make sure it is unlocked before it is plugged in.
 
 Signing Fix
