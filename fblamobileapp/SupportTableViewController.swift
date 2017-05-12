@@ -11,7 +11,7 @@ import SafariServices
 
 class SupportTableViewController: UITableViewController {
 
-    let url = "https://www.appsfoundation.com/post/swift-code-convention-and-guidelines"
+    let url = "https://github.com/gzimbric/fblamobileapp/blob/master/README.md"
     
     override func viewDidLoad() {
         super.viewDidLoad()

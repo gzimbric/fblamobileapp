@@ -125,7 +125,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 print("Image added to post successfully.")
                 self.imageFileName = "\(randomName as String).jpeg"
             } else {
-                print("Error adding image: \(error?.localizedDescription)")
+                print("Error adding image: \(String(describing: error?.localizedDescription))")
             }
         }
     }
